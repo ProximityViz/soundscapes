@@ -1,0 +1,37 @@
+<h1>{{parseInt(sound.id) + 1}}</h1>
+
+<div class="photo">
+  <img ng-src="../media/{{sound.quiz.image.file}}" class="main">
+</div>
+<div class="audio">
+  <audio controls>
+    <source ng-src="{{sound.quiz.sound.file}}">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<div class="choices">
+  <div class="choice-row">
+    <div class="choice" ng-class="{attempted: sound.attempted[0], correct: sound.quiz.correctSpectrogramIndex === 0}">
+      <button ng-click="sound.choose(0)">A</button>
+      <div ng-style="{'background-image':'url(/media/'+sound.quiz.spectrograms[0].file+')'}" class="spectrogram"></div>
+    </div>
+    <div class="choice incorrect" ng-class="{attempted: sound.attempted[1], correct: sound.quiz.correctSpectrogramIndex === 1}">
+      <button ng-click="sound.choose(1)">B</button>
+      <div ng-style="{'background-image':'url(/media/'+sound.quiz.spectrograms[1].file+')'}" class="spectrogram"></div>
+    </div>
+  </div>
+  <div class="choice-row">
+    <div class="choice" ng-class="{attempted: sound.attempted[2], correct: sound.quiz.correctSpectrogramIndex === 2}">
+      <button ng-click="sound.choose(2)">C</button>
+      <div ng-style="{'background-image':'url(/media/'+sound.quiz.spectrograms[2].file+')'}" class="spectrogram"></div>
+    </div>
+    <div class="choice" ng-class="{attempted: sound.attempted[3], correct: sound.quiz.correctSpectrogramIndex === 3}">
+      <button ng-click="sound.choose(3)">D</button>
+      <div ng-style="{'background-image':'url(/media/'+sound.quiz.spectrograms[3].file+')'}" class="spectrogram"></div>
+    </div>
+  </div>
+  <div>
+    <button class="next" ng-if="sound.complete">Next</button>
+  </div>
+</div>
