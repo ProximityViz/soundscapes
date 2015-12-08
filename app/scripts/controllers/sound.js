@@ -8,7 +8,7 @@
  * Controller of the soundscapesApp
  */
 angular.module('soundscapesApp')
-  .controller('SoundCtrl', function ($routeParams, SoundsFactory) {
+  .controller('SoundCtrl', function ($routeParams, SoundsFactory, $location) {
   	this.id = $routeParams.soundId;
 
   	console.log(SoundsFactory.getSound(this.id));
@@ -22,4 +22,9 @@ angular.module('soundscapesApp')
   		this.complete = this.quiz.correctSpectrogramIndex === choice;
   		this.attempted[choice] = true;
   	};
+
+    this.navigate = function() {
+    	var nextSound = parseInt(this.id) + 1;
+      $location.path("/sounds/" + nextSound);
+    };
   });
