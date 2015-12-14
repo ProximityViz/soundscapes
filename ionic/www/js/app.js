@@ -41,13 +41,9 @@ angular.module('app', ['ionic', 'app.controllers'])
     controller: 'GameCtrl as game'
   })
   .state('game-pack', {
-    url: '/game/:packId/:soundId',
-    // views: {
-    //   pack: {
-        templateUrl: 'templates/game-play.html',
-        controller: 'GamePlayCtrl as gamePlay'
-    //   }
-    // }
+    url: '/game/:packId/',
+    templateUrl: 'templates/game-play.html',
+    controller: 'GamePlayCtrl as gamePlay'
   });
 
   $urlRouterProvider.otherwise('/');

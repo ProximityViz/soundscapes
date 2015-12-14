@@ -79,7 +79,7 @@ angular.module('app')
       },{
         title: 'Northern Flicker',
         image: {
-          file: 'Northern_Flicker_Igcredit_USFWS.jpg',
+          file: 'Northern_Flicker_lgcredit_USFWS.jpg',
           credit: 'USFWS/David Menke',
         },
         sound: {
@@ -141,7 +141,10 @@ angular.module('app')
     ];
 
     var packs = [
-      npsPack
+      {
+        title: 'NPS',
+        pack: npsPack
+      }
     ];
 
     function getSound(id) {
@@ -149,12 +152,14 @@ angular.module('app')
     }
 
     function getQuiz(packId, sound) {
-      var pack = packs[packId];
+      console.log(packId);
+      console.log(sound);
+      var pack = packs[packId].pack;
       var quiz = {};
       quiz.title = pack[sound].title;
       quiz.image = pack[sound].image;
       quiz.sound = pack[sound].sound;
-      quiz.sound.file = "../media/" + quiz.sound.file;
+      quiz.sound.file = "../resources/" + quiz.sound.file;
       quiz.correctSpectrogramIndex = Math.floor(Math.random() * 4);
       quiz.spectrograms = ["", "", "", ""];
       quiz.spectrograms[quiz.correctSpectrogramIndex] = pack[sound].spectrogram;
@@ -171,6 +176,7 @@ angular.module('app')
         }
       }
       quiz.remainingSpectrograms = remainingSpectrograms;
+      quiz.packTitle = packs[packId].title;
       quiz.packSize = pack.length;
       return quiz;
     }
