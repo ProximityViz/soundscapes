@@ -22,10 +22,13 @@
 .next {
   height: 44px;
 }
+div.choices {
+  //                  nav bar   audio    next   padding
+  height: calc(100vh - 44px   - 100px   - 60px - 28px);
+}
 div.choice {
   width: 100%;
-  // 1/4 of    view   nav bar   audio    next   padding
-  height: calc(25vh - 11px    - 25px   - 15px - 7px);
+  height: 25%;
   position: relative;
   border: 1px dashed #fff;
   .spectrogram {

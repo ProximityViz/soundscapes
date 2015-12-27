@@ -9753,9 +9753,12 @@ a.button {
 .next {
   height: 44px; }
 
+div.choices {
+  height: calc(100vh - 44px   - 100px   - 60px - 28px); }
+
 div.choice {
   width: 100%;
-  height: calc(25vh - 11px    - 25px   - 15px - 7px);
+  height: 25%;
   position: relative;
   border: 1px dashed #fff; }
   div.choice .spectrogram {
