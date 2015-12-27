@@ -16,6 +16,7 @@
         <div class="item item-divider">
           {{category.category}}
         </div>
+        <!-- maybe make this a partial -->
         <div ng-repeat="card in category.cards" class="item">
           <div>{{card.title}}</div>
           <div class="audio">
@@ -25,8 +26,9 @@
             </audio>
             <div class="inline">Credit: <span ng-bind-html="card.sound.credit"></span></div>
           </div>
-          <div class="photo" ng-style="{'background-image':'url(/../resources/'+card.image.file+')'}" ng-click="gamePlay.showPhotoModal()"></div>
-          <div class="spectrogram" ng-style="{'background-image': 'url(/../resources/'+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(0)"></div>
+          <div class="photo" ng-style="{'background-image':'url(/../resources/'+card.image.file+')'}" ng-click="explore.showPhotoModal(card)"></div>
+          <div class="spectrogram" ng-style="{'background-image': 'url(/../resources/'+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(card)"></div>
+          <div ng-bind-html="card.sound.info"></div>
         </div>
       </div>
     </div>

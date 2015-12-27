@@ -1,11 +1,11 @@
-<ion-modal-view class="photo-modal" ng-click="gamePlay.photoModal.hide()">
+<ion-modal-view class="photo-modal" ng-click="photoModal.hide()">
   <ion-header-bar class="bar bar-header bar-positive">
-    <h1 class="title">{{gamePlay.title}}</h1>
-    <button class="button button-clear button-primary" ng-click="gamePlay.photoModal.hide()">Close</button>
+    <h1 class="title">{{title}}</h1>
+    <button class="button button-clear button-primary" ng-click="photoModal.hide()">Close</button>
   </ion-header-bar>
   <ion-content class="padding" scroll="false">
-    <div class="photo" ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.image.file+')'}">
-    <div ng-bind-html="gamePlay.quiz.image.info"></div>
-    <div>Credit: <span ng-bind-html="gamePlay.quiz.image.credit"></span></div>
+    <div class="photo" ng-style="{'background-image':'url(/../resources/'+image.file+')'}"></div>
+    <div ng-bind-html="image.info"></div>
+    <div>Credit: <span ng-bind-html="image.credit"></span></div>
   </ion-content>
 </ion-modal-view>

@@ -15,7 +15,6 @@ angular.module('app.controllers')
 
 	this.attempted = [false, false, false, false];
 	this.complete = false;
-	var _this = this;
 
 	this.choose = function(choice) {
 		if (!this.complete) {		
@@ -41,22 +40,25 @@ angular.module('app.controllers')
 		scope: $scope,
 		animation: 'slide-in-up'
 	}).then(function(modal) {
-		_this.photoModal = modal;
+		$scope.photoModal = modal;
 	});
 
 	$ionicModal.fromTemplateUrl('templates/spectrogram-modal.html', {
 		scope: $scope,
 		animation: 'slide-in-up'
 	}).then(function(modal) {
-		_this.spectrogramModal = modal;
+		$scope.spectrogramModal = modal;
 	});
 
 	this.showPhotoModal = function() {
-		_this.photoModal.show();
+		$scope.title = this.quiz.title;
+		$scope.image = this.quiz.image;
+		$scope.photoModal.show();
 	}
 
 	this.showSpectrogramModal = function(index) {
-		_this.spectrogram = this.quiz.spectrograms[index].file;
-		_this.spectrogramModal.show();
+		$scope.title = "";
+		$scope.spectrogram = this.quiz.spectrograms[index];
+		$scope.spectrogramModal.show();
 	}
 }]);
