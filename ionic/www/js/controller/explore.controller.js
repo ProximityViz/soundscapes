@@ -5,6 +5,14 @@ angular.module('app.controllers')
 
 	this.packName = "NPS";
 	this.pack = SoundsFactory.getExplore($stateParams.packId);
+	this.expanded = [];
+	for (var i in this.pack.pack) {
+		this.expanded[i] = false;
+	};
+
+	this.expandCollapse = function(index) {
+		this.expanded[index] = !this.expanded[index];
+	}
 
 	$ionicModal.fromTemplateUrl('templates/photo-modal.html', {
 		scope: $scope,

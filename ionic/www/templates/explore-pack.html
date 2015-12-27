@@ -13,22 +13,25 @@
     </div>
     <div class="list">
       <div ng-repeat="category in explore.pack.pack">
-        <div class="item item-divider">
+        <div class="item item-divider item-icon-right" ng-click="explore.expandCollapse($index)">
           {{category.category}}
+          <i class="icon" ng-class="explore.expanded[$index] ? 'ion-ios-minus-empty' : 'ion-ios-plus-empty'"></i>
         </div>
         <!-- maybe make this a partial -->
-        <div ng-repeat="card in category.cards" class="item">
-          <div>{{card.title}}</div>
-          <div class="audio">
-            <audio controls class="inline" ng-init="audio='/../resources/'+card.sound.file">
-              <source ng-src="{{audio}}">
-              Your browser does not support the audio element.
-            </audio>
-            <div class="inline">Credit: <span ng-bind-html="card.sound.credit"></span></div>
+        <div ng-show="explore.expanded[$index]">
+          <div ng-repeat="card in category.cards" class="item">
+            <div>{{card.title}}</div>
+            <div class="audio">
+              <audio controls class="inline" ng-init="audio='/../resources/'+card.sound.file">
+                <source ng-src="{{audio}}">
+                Your browser does not support the audio element.
+              </audio>
+              <div class="inline">Credit: <span ng-bind-html="card.sound.credit"></span></div>
+            </div>
+            <div class="photo" ng-style="{'background-image':'url(/../resources/'+card.image.file+')'}" ng-click="explore.showPhotoModal(card)"></div>
+            <div class="spectrogram" ng-style="{'background-image': 'url(/../resources/'+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(card)"></div>
+            <div ng-bind-html="card.sound.info"></div>
           </div>
-          <div class="photo" ng-style="{'background-image':'url(/../resources/'+card.image.file+')'}" ng-click="explore.showPhotoModal(card)"></div>
-          <div class="spectrogram" ng-style="{'background-image': 'url(/../resources/'+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(card)"></div>
-          <div ng-bind-html="card.sound.info"></div>
         </div>
       </div>
     </div>

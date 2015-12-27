@@ -9823,3 +9823,7 @@ ion-view.explore-view .photo {
 
 ion-view.explore-view .sound-credit {
   display: inline-block; }
+
+ion-view.explore-view .item-divider {
+  padding-top: 12px;
+  padding-bottom: 12px; }
