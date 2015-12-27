@@ -37,13 +37,21 @@ angular.module('app', ['ionic', 'app.controllers', 'ngAudio'])
   })
   .state('game', {
     url: '/game',
-    templateUrl: 'templates/game.html',
-    controller: 'GameCtrl as game'
+    templateUrl: 'templates/game.html'
   })
   .state('game-pack', {
     url: '/game/:packId/',
     templateUrl: 'templates/game-play.html',
     controller: 'GamePlayCtrl as gamePlay'
+  })
+  .state('explore', {
+    url: '/explore',
+    templateUrl: 'templates/explore.html'
+  })
+  .state('explore-pack', {
+    url: '/explore/:packId/',
+    templateUrl: 'templates/explore-pack.html',
+    controller: 'ExploreCtrl as explore'
   });
 
   $urlRouterProvider.otherwise('/');

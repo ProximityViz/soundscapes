@@ -163,17 +163,56 @@ angular.module('app')
       })
     }
 
+    function getCategories(pack) {
+      var unique = {};
+      var categories = [];
+      for (var i in pack) {
+        if (typeof(unique[pack[i].category]) == "undefined") {
+          categories.push(pack[i].category);
+        }
+        unique[pack[i].category] = 0;
+      }
+
+      return categories;
+    }
+
     // return the items of a pack, sorted by category and title
     function getExplore(packId) {
       var pack = packs[packId];
+      var packToSort = angular.copy(pack.pack);
       console.log(pack);
-      pack = angular.copy(pack);
-      sortByKey(pack.pack, 'title');
-      sortByKey(pack.pack, 'category');
-      return angular.forEach(pack, function(value, key) {
-        console.log(key + ": " + value);
-      });
+      var explorePack = angular.copy(pack);
+      var categories = getCategories(pack.pack);
+      categories.sort();
+      explorePack.pack = [];
+      for (var category in categories) {
+        explorePack.pack.push({'category': categories[category]});
+        explorePack.pack[category].cards = [];
+        for (var card in packToSort) {
+          // console.log(packToSort[card].category);
+          // console.log(categories[category]);
+          if (packToSort[card].category === categories[category]) {
+            explorePack.pack[category].cards.push(packToSort[card]);
+            // remove item from PackToSort
+          };
+          packToSort[card];
+        };
+        // inside each category, sort by title
+        sortByKey(explorePack.pack[category].cards, 'title');
+      };
+      return explorePack;
+      // make an angular.copy() of each item
+
     }
+
+    // function getExplore(packId) {
+    //   var pack = packs[packId];
+    //   pack = angular.copy(pack);
+    //   sortByKey(pack.pack, 'title');
+    //   sortByKey(pack.pack, 'category');
+    //   pack.categories = getCategories(pack.pack);
+    //   return pack;
+    // }
 
     function getSound(id) {
       return npsPack[id];
