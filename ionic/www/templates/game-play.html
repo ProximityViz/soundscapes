@@ -19,22 +19,22 @@
     <!-- Refactor this to use ng-repeat? -->
     <div class="choices">
       <div class="choice" ng-class="{attempted: gamePlay.attempted[0], correct: gamePlay.quiz.correctSpectrogramIndex === 0}">
-        <button ng-click="gamePlay.choose(0)">A</button>
+        <button class="icon ion-arrow-right-a" ng-click="gamePlay.choose(0)"></button>
         <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[0].file+')'}" class="spectrogram" ng-click="gamePlay.choose(0)"></div>
         <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal(0)"></button>
       </div>
       <div class="choice incorrect" ng-class="{attempted: gamePlay.attempted[1], correct: gamePlay.quiz.correctSpectrogramIndex === 1}">
-        <button ng-click="gamePlay.choose(1)">B</button>
+        <button class="icon ion-arrow-right-a" ng-click="gamePlay.choose(1)"></button>
         <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[1].file+')'}" class="spectrogram" ng-click="gamePlay.choose(1)"></div>
         <button class="zoom-button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal(1)"></button>
       </div>
       <div class="choice" ng-class="{attempted: gamePlay.attempted[2], correct: gamePlay.quiz.correctSpectrogramIndex === 2}">
-        <button ng-click="gamePlay.choose(2)">C</button>
+        <button class="icon ion-arrow-right-a" ng-click="gamePlay.choose(2)"></button>
         <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[2].file+')'}" class="spectrogram" ng-click="gamePlay.choose(2)"></div>
         <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal(2)"></button>
       </div>
       <div class="choice" ng-class="{attempted: gamePlay.attempted[3], correct: gamePlay.quiz.correctSpectrogramIndex === 3}">
-        <button ng-click="gamePlay.choose(3)">D</button>
+        <button class="icon ion-arrow-right-a" ng-click="gamePlay.choose(3)"></button>
         <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[3].file+')'}" class="spectrogram" ng-click="gamePlay.choose(3)"></div>
         <button class="zoom-button icon ion-search" ng-click="gamePlay.showSpectrogramModal(3)"></button>
       </div>
