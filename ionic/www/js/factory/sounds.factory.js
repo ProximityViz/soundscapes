@@ -17,6 +17,7 @@ angular.module('app')
     var npsPack = [
       {
         title: 'Thunder',
+        category: 'Meteorological',
         image: {
           file: 'Lightning_Yellowstone_NPS.jpg',
           info: 'Yellowstone',
@@ -33,6 +34,7 @@ angular.module('app')
         }
       },{
         title: "Couch's Spadefoot Toad",
+        category: 'Amphibians',
         image: {
           file: 'CouchsSpadefootToad_CreditNPS_JamesBorgmeyer.jpg',
           credit: 'NPS/James Borgmeyer' 
@@ -47,22 +49,8 @@ angular.module('app')
           credit: 'NPS'
         }
       },{
-        title: 'Green Treefrog',
-        image: {
-          file: 'GreenTreeFrog_Credit_NPS_TheresaThom.JPG',
-          credit: 'NPS/Thereas Thom',
-        },
-        sound: {
-          file: 'GreenTreeFrog_2008-08-16_EvergladesNP.MP3',
-          info: 'This sound was recorded at Everglades National Park in Florida.',
-          credit: 'NPS'
-        },
-        spectrogram: {
-          file: 'Spectro_EVER002_greentreefrog.jpg',
-          credit: 'NPS'
-        }
-      },{
         title: 'Pig Frog',
+        category: 'Amphibians',
         image: {
           file: 'PigFrog_credit_USGS_JWillson.jpg',
           credit: 'USGS/J. Willson'
@@ -78,6 +66,7 @@ angular.module('app')
         }
       },{
         title: 'Northern Flicker',
+        category: 'Birds',
         image: {
           file: 'Northern_Flicker_lgcredit_USFWS.jpg',
           credit: 'USFWS/David Menke',
@@ -93,6 +82,7 @@ angular.module('app')
         }
       },{
         title: 'Spotted Owl',
+        category: 'Birds',
         image: {
           file: 'Spotted_Owl_credit_FWS_lg.jpg',
           credit: 'USFWS/John & Karen Hollingsworth'
@@ -108,6 +98,7 @@ angular.module('app')
         }
       },{
         title: 'Avalanche',
+        category: 'Geological',
         image: {
           file: 'Avalanche_UpperIngrahamGlacierMountRainier_lg.jpg',
           info: 'Upper Ingraham Glacier, Mount Rainier',
@@ -123,7 +114,24 @@ angular.module('app')
           credit: 'NPS'
         }
       },{
+        title: 'Green Treefrog',
+        category: 'Amphibians',
+        image: {
+          file: 'GreenTreeFrog_Credit_NPS_TheresaThom.JPG',
+          credit: 'NPS/Thereas Thom',
+        },
+        sound: {
+          file: 'GreenTreeFrog_2008-08-16_EvergladesNP.MP3',
+          info: 'This sound was recorded at Everglades National Park in Florida.',
+          credit: 'NPS'
+        },
+        spectrogram: {
+          file: 'Spectro_EVER002_greentreefrog.jpg',
+          credit: 'NPS'
+        }
+      },{
         title: 'Stream',
+        category: 'Hydrological',
         image: {
           file: 'Stream_JohnHeidecker_lg.jpg',
           credit: 'John Heidecker'
@@ -146,6 +154,26 @@ angular.module('app')
         pack: npsPack
       }
     ];
+
+    function sortByKey(array, key) {
+      return array.sort(function(a, b) {
+        var x = a[key];
+        var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      })
+    }
+
+    // return the items of a pack, sorted by category and title
+    function getExplore(packId) {
+      var pack = packs[packId];
+      console.log(pack);
+      pack = angular.copy(pack);
+      sortByKey(pack.pack, 'title');
+      sortByKey(pack.pack, 'category');
+      return angular.forEach(pack, function(value, key) {
+        console.log(key + ": " + value);
+      });
+    }
 
     function getSound(id) {
       return npsPack[id];
@@ -184,6 +212,7 @@ angular.module('app')
     // Public API here
     return {
       getSound: getSound,
-      getQuiz: getQuiz
+      getQuiz: getQuiz,
+      getExplore: getExplore
     };
   });
