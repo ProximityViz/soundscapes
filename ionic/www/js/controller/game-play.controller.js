@@ -1,6 +1,6 @@
 angular.module('app.controllers')
-.controller('GamePlayCtrl', ['$scope', '$ionicModal', 'SoundsFactory', '$stateParams', 
-										 function($scope,   $ionicModal,   SoundsFactory,   $stateParams) {
+.controller('GamePlayCtrl', ['$scope', '$ionicModal', 'SoundsFactory', '$stateParams', 'ngAudio', 
+										 function($scope,   $ionicModal,   SoundsFactory,   $stateParams,   ngAudio) {
 	console.log('GamePlayCtrl');
 
 	// move this into its own function so it's not all repeated
@@ -9,6 +9,7 @@ angular.module('app.controllers')
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
 	this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
+	this.audio = ngAudio.load(this.quiz.sound.file);
 
 	console.log(this.quiz);
 
@@ -25,10 +26,12 @@ angular.module('app.controllers')
 	};
 
 	this.advance = function() {
+		this.audio.stop();
 		this.id++;
 		this.quiz = SoundsFactory.getQuiz($stateParams.packId, this.id);
 		this.number = parseInt(this.id) + 1;
 		this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
+		this.audio = ngAudio.load(this.quiz.sound.file);
 		this.attempted = [false, false, false, false];
 		this.complete = false;
 		console.log(this.id);
