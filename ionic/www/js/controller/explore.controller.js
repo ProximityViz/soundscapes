@@ -5,5 +5,4 @@ angular.module('app.controllers')
 
 	this.packName = "NPS";
 	this.pack = SoundsFactory.getExplore($stateParams.packId);
-	console.log(this.pack);
 }]);

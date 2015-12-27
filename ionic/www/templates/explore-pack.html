@@ -1,4 +1,4 @@
-<ion-view>
+<ion-view class="explore-view">
   <ion-nav-title>
     {{explore.pack.title}}
   </ion-nav-title>
@@ -16,8 +16,17 @@
         <div class="item item-divider">
           {{category.category}}
         </div>
-        <div ng-repeat="item in category.cards" class="item">
-          {{item.title}}
+        <div ng-repeat="card in category.cards" class="item">
+          <div>{{card.title}}</div>
+          <div class="audio">
+            <audio controls class="inline" ng-init="audio='/../resources/'+card.sound.file">
+              <source ng-src="{{audio}}">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="inline">Credit: <span ng-bind-html="card.sound.credit"></span></div>
+          </div>
+          <div class="photo" ng-style="{'background-image':'url(/../resources/'+card.image.file+')'}" ng-click="gamePlay.showPhotoModal()"></div>
+          <div class="spectrogram" ng-style="{'background-image': 'url(/../resources/'+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(0)"></div>
         </div>
       </div>
     </div>

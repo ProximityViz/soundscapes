@@ -9731,15 +9731,24 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.audio-photo {
+.photo-modal {
+  height: calc(100% - 44px); }
+  .photo-modal .photo {
+    height: 80%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center; }
+
+ion-view.game-play-view .audio-photo {
   height: 100px;
   margin-bottom: 10px; }
-  .audio-photo .audio {
+  ion-view.game-play-view .audio-photo .audio {
     display: inline-block;
     width: calc(100vw - 190px);
     margin-right: 10px;
     min-width: 300px; }
-  .audio-photo .photo {
+  ion-view.game-play-view .audio-photo .photo {
     display: inline-block;
     width: 150px;
     height: 100px;
@@ -9750,18 +9759,18 @@ a.button {
     background-repeat: no-repeat;
     background-position: center center; }
 
-.next {
+ion-view.game-play-view .next {
   height: 44px; }
 
-div.choices {
+ion-view.game-play-view div.choices {
   height: calc(100vh - 44px   - 100px   - 60px - 28px); }
 
-div.choice {
+ion-view.game-play-view div.choice {
   width: 100%;
   height: 25%;
   position: relative;
   border: 1px dashed #fff; }
-  div.choice .spectrogram {
+  ion-view.game-play-view div.choice .spectrogram {
     position: absolute;
     top: 0;
     left: 0;
@@ -9770,14 +9779,14 @@ div.choice {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; }
-  div.choice .zoom-button {
+  ion-view.game-play-view div.choice .zoom-button {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 44px;
     height: 44px; }
 
-.attempted:after {
+ion-view.game-play-view .attempted:after {
   position: absolute;
   text-align: center;
   vertical-align: middle;
@@ -9788,19 +9797,29 @@ div.choice {
   bottom: 0;
   opacity: 0.5; }
 
-.attempted.correct:after {
+ion-view.game-play-view .attempted.correct:after {
   background-color: green;
   content: "Correct!"; }
 
-.attempted:not(.correct):after {
+ion-view.game-play-view .attempted:not(.correct):after {
   background-color: red;
   content: "Incorrect! Try again."; }
 
-.photo-modal {
-  height: calc(100% - 44px); }
-  .photo-modal .photo {
-    height: 80%;
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center; }
+ion-view.explore-view .photo, ion-view.explore-view .spectrogram {
+  display: inline-block;
+  width: 600px;
+  height: 400px;
+  max-height: 25vh;
+  max-width: calc(50vw - 26px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center; }
+
+ion-view.explore-view .spectrogram {
+  margin-left: 8px; }
+
+ion-view.explore-view .photo {
+  margin-right: 8px; }
+
+ion-view.explore-view .sound-credit {
+  display: inline-block; }
