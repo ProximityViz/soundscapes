@@ -179,40 +179,21 @@ angular.module('app')
     // return the items of a pack, sorted by category and title
     function getExplore(packId) {
       var pack = packs[packId];
-      var packToSort = angular.copy(pack.pack);
-      console.log(pack);
       var explorePack = angular.copy(pack);
       var categories = getCategories(pack.pack);
       categories.sort();
       explorePack.pack = [];
+      // add cards for each category
       for (var category in categories) {
         explorePack.pack.push({'category': categories[category]});
-        explorePack.pack[category].cards = [];
-        for (var card in packToSort) {
-          // console.log(packToSort[card].category);
-          // console.log(categories[category]);
-          if (packToSort[card].category === categories[category]) {
-            explorePack.pack[category].cards.push(packToSort[card]);
-            // remove item from PackToSort
-          };
-          packToSort[card];
-        };
+        explorePack.pack[category].cards = pack.pack.filter(function (value, index, array) {
+          return (value.category === categories[category]);
+        });
         // inside each category, sort by title
         sortByKey(explorePack.pack[category].cards, 'title');
       };
       return explorePack;
-      // make an angular.copy() of each item
-
     }
-
-    // function getExplore(packId) {
-    //   var pack = packs[packId];
-    //   pack = angular.copy(pack);
-    //   sortByKey(pack.pack, 'title');
-    //   sortByKey(pack.pack, 'category');
-    //   pack.categories = getCategories(pack.pack);
-    //   return pack;
-    // }
 
     function getSound(id) {
       return npsPack[id];
