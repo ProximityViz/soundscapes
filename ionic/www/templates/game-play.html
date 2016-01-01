@@ -5,11 +5,10 @@
   <ion-content class="padding" scroll="false">
     <div class="audio-photo">
       <div class="audio">
-        <button ng-click="gamePlay.audio.paused ? gamePlay.audio.play() : gamePlay.audio.pause()" class="icon ion-play"></button>
-<!--         <audio controls>
-          <source ng-src="{{gamePlay.quiz.sound.file}}">
+        <audio id="audio" controls class="inline">
+          <source id="source" ng-src="{{gamePlay.audio}}">
           Your browser does not support the audio element.
-        </audio> -->
+        </audio>
         <div ng-bind-html="gamePlay.quiz.sound.info"></div>
         <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
       </div>
