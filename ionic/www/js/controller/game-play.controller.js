@@ -1,7 +1,9 @@
 angular.module('app.controllers')
-.controller('GamePlayCtrl', ['$scope', '$ionicModal', 'SoundsFactory', '$stateParams', 'ngAudio', 
-										 function($scope,   $ionicModal,   SoundsFactory,   $stateParams,   ngAudio) {
+.controller('GamePlayCtrl', ['$scope', '$ionicModal', '$ionicConfig', 'SoundsFactory', '$stateParams', 
+					 function($scope,   $ionicModal,   $ionicConfig,   SoundsFactory,   $stateParams) {
 	console.log('GamePlayCtrl');
+
+	$ionicConfig.backButton.previousTitleText(false);
 
 	// move this into its own function so it's not all repeated
 	this.id = 0;
@@ -17,8 +19,7 @@ angular.module('app.controllers')
 	this.complete = false;
 
 	this.choose = function(choice) {
-		if (!this.complete) {		
-			console.log(choice);
+		if (!this.complete) {
 			this.complete = this.quiz.correctSpectrogramIndex === choice;
 			this.attempted[choice] = true;
 		};
