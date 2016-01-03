@@ -17,34 +17,12 @@
         <div>{{gamePlay.title}}</div>
       </div>
       <div class="photo" ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
-        <!-- <img ng-src="../resources/{{gamePlay.quiz.image.file}}"> -->
       </div>
     </div>
     <div class="container">
-      <!-- Refactor this to use ng-repeat? -->
-      <div class="choice">
-        <button ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[0].file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[0], correct: gamePlay.quiz.correctSpectrogramIndex === 0}" ng-click="gamePlay.choose(0)">
-          <!-- <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[0].file+')'}" class="spectrogram"></div> -->
-        </button>
-        <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal(0)"></button>
-      </div>
-      <div class="choice">
-        <button ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[1].file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[1], correct: gamePlay.quiz.correctSpectrogramIndex === 1}" ng-click="gamePlay.choose(1)">
-          <!-- <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[1].file+')'}" class="spectrogram"></div> -->
-        </button>
-        <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal(1)"></button>
-      </div>
-      <div class="choice">
-        <button ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[2].file+')'}" ng-class="{attempted: gamePlay.attempted[2], correct: gamePlay.quiz.correctSpectrogramIndex === 2}" class="spectrogram button button-light" ng-click="gamePlay.choose(2)">
-          <!-- <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[2].file+')'}" class="spectrogram"></div> -->
-        </button>
-        <button class="zoom-button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal(2)"></button>
-      </div>
-      <div class="choice">
-        <button ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[3].file+')'}" class="spectrogram button button-stable" ng-class="{attempted: gamePlay.attempted[3], correct: gamePlay.quiz.correctSpectrogramIndex === 3}" ng-click="gamePlay.choose(3)">
-          <!-- <div ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.spectrograms[3].file+')'}" class="spectrogram"></div> -->
-        </button>
-        <button class="zoom-button icon ion-search" ng-click="gamePlay.showSpectrogramModal(3)"></button>
+      <div class="choice" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
+        <button ng-style="{'background-image':'url(/../resources/'+spectrogram.file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
+        <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal($index)"></button>
       </div>
     </div>
   </ion-content>
