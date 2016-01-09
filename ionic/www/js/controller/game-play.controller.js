@@ -6,7 +6,7 @@ angular.module('app.controllers')
 	$ionicConfig.backButton.previousTitleText(false);
 
 	// move this into its own function so it's not all repeated
-	this.id = $localStorage.gameProgress[$stateParams.pack];
+	this.id = $localStorage.gameProgress[$stateParams.pack] ? $localStorage.gameProgress[$stateParams.pack] : 0;
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
