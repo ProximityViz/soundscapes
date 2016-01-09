@@ -1,12 +1,12 @@
 angular.module('app.controllers')
-.controller('GamePlayCtrl', ['$scope', '$ionicModal', '$ionicConfig', 'SoundsFactory', '$stateParams', 
-					 function($scope,   $ionicModal,   $ionicConfig,   SoundsFactory,   $stateParams) {
+.controller('GamePlayCtrl', ['$scope', '$localStorage', '$ionicModal', '$ionicConfig', 'SoundsFactory', '$stateParams', 
+					 					 function($scope,   $localStorage,   $ionicModal,   $ionicConfig,   SoundsFactory,   $stateParams) {
 	console.log('GamePlayCtrl');
 
 	$ionicConfig.backButton.previousTitleText(false);
 
 	// move this into its own function so it's not all repeated
-	this.id = 0;
+	this.id = $localStorage.gameProgress[$stateParams.pack];
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
@@ -35,6 +35,7 @@ angular.module('app.controllers')
 		this.audio = '/../resources/'+this.quiz.sound.file;
 		source.src = this.audio;
 		audio.load();
+		$localStorage.gameProgress[$stateParams.pack] = this.id;
 		console.log(this.id);
 	};
 
