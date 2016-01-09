@@ -1153,12 +1153,12 @@ angular.module('app')
       }
     ];
 
-    var packs = [
-      {
+    var packs = {
+      'NPS': {
         title: 'NPS',
         pack: npsPack
       }
-    ];
+    };
 
     function sortByKey(array, key) {
       return array.sort(function(a, b) {
@@ -1182,8 +1182,8 @@ angular.module('app')
     }
 
     // return the items of a pack, sorted by category and title
-    function getExplore(packId) {
-      var pack = packs[packId];
+    function getExplore(packName) {
+      var pack = packs[packName];
       var explorePack = angular.copy(pack);
       var categories = getCategories(pack.pack);
       categories.sort();
@@ -1204,10 +1204,10 @@ angular.module('app')
       return npsPack[id];
     }
 
-    function getQuiz(packId, sound) {
-      console.log(packId);
+    function getQuiz(packName, sound) {
+      console.log(packName);
       console.log(sound);
-      var pack = packs[packId].pack;
+      var pack = packs[packName].pack;
       var quiz = {};
       quiz.title = pack[sound].title;
       quiz.image = pack[sound].image;
@@ -1229,7 +1229,7 @@ angular.module('app')
         }
       }
       quiz.remainingSpectrograms = remainingSpectrograms;
-      quiz.packTitle = packs[packId].title;
+      quiz.packTitle = packs[packName].title;
       quiz.packSize = pack.length;
       return quiz;
     }

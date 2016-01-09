@@ -40,7 +40,7 @@ angular.module('app', ['ionic', 'app.controllers'])
     templateUrl: 'templates/game.html'
   })
   .state('game-pack', {
-    url: '/game/:packId/',
+    url: '/game/:pack/',
     templateUrl: 'templates/game-play.html',
     controller: 'GamePlayCtrl as gamePlay'
   })
@@ -49,7 +49,7 @@ angular.module('app', ['ionic', 'app.controllers'])
     templateUrl: 'templates/explore.html'
   })
   .state('explore-pack', {
-    url: '/explore/:packId/',
+    url: '/explore/:pack/',
     templateUrl: 'templates/explore-pack.html',
     controller: 'ExploreCtrl as explore'
   });

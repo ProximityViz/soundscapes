@@ -7,7 +7,7 @@ angular.module('app.controllers')
 
 	// move this into its own function so it's not all repeated
 	this.id = 0;
-	this.quiz = SoundsFactory.getQuiz($stateParams.packId, this.id);
+	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
 	this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
@@ -27,7 +27,7 @@ angular.module('app.controllers')
 
 	this.advance = function() {
 		this.id++;
-		this.quiz = SoundsFactory.getQuiz($stateParams.packId, this.id);
+		this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 		this.number = parseInt(this.id) + 1;
 		this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
 		this.attempted = [false, false, false, false];
