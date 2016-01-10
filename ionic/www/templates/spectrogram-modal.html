@@ -4,7 +4,7 @@
     <button class="button button-clear button-primary" ng-click="spectrogramModal.hide()">Close</button>
   </ion-header-bar>
   <ion-content class="padding" scroll="false">
-    <div class="photo" ng-style="{'background-image':'url(/../resources/'+spectrogram.file+')'}"></div>
+    <div class="photo" ng-style="{'background-image':'url(/'+spectrogram.file+')'}"></div>
     <div ng-bind-html="spectrogram.info"></div>
     <div>Credit: <span ng-bind-html="spectrogram.credit"></span></div>
   </ion-content>

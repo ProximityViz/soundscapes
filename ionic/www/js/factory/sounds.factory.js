@@ -254,8 +254,8 @@ angular.module('app')
           credit: 'NPS'
         }
       },{
-        title: 'Reptiles',
-        category: 'Mammals',
+        title: 'Alligator',
+        category: 'Reptiles',
         image: {
           file: 'alligator_lg.jpg',
           credit: 'NPS'
@@ -1196,6 +1196,13 @@ angular.module('app')
         });
         // inside each category, sort by title
         sortByKey(explorePack.pack[category].cards, 'title');
+        // adjust paths of resources
+        for (var i in explorePack.pack[category].cards) {
+          var card = explorePack.pack[category].cards[i];
+          card.image.file = "../resources/" + packName + '/' + card.image.file;
+          card.sound.file = "../resources/" + packName + '/' + card.sound.file;
+          card.spectrogram.file = "../resources/" + packName + '/' + card.spectrogram.file;
+        }
       };
       return explorePack;
     }
@@ -1212,7 +1219,8 @@ angular.module('app')
       quiz.title = pack[sound].title;
       quiz.image = pack[sound].image;
       quiz.sound = pack[sound].sound;
-      quiz.sound.file = "../resources/" + quiz.sound.file;
+      quiz.image.file = "../resources/" + packName + '/' + quiz.image.file;
+      quiz.sound.file = "../resources/" + packName + '/' + quiz.sound.file;
       quiz.correctSpectrogramIndex = Math.floor(Math.random() * 4);
       quiz.spectrograms = ["", "", "", ""];
       quiz.spectrograms[quiz.correctSpectrogramIndex] = pack[sound].spectrogram;
@@ -1227,6 +1235,7 @@ angular.module('app')
           // splice it from remainingSpectrograms
           remainingSpectrograms.splice(index, 1);
         }
+        quiz.spectrograms[i].file = "../resources/" + packName + '/' + quiz.spectrograms[i].file;
       }
       quiz.remainingSpectrograms = remainingSpectrograms;
       quiz.packTitle = packs[packName].title;

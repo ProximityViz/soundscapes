@@ -16,13 +16,13 @@
         <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
         <div>{{gamePlay.title}}</div>
       </div>
-      <div class="photo" ng-style="{'background-image':'url(/../resources/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
+      <div class="photo" ng-style="{'background-image':'url(/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
       </div>
     </div>
     <div class="container">
       <div class="choice" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
         <div class="time-bar-not-animated"></div>
-        <button ng-style="{'background-image':'url(/../resources/'+spectrogram.file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
+        <button ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
         <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal($index)"></button>
       </div>
     </div>

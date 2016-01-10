@@ -8,10 +8,11 @@ angular.module('app.controllers')
 	// move this into its own function so it's not all repeated
 	this.id = $localStorage.gameProgress[$stateParams.pack] ? $localStorage.gameProgress[$stateParams.pack] : 0;
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
+	console.log(this.quiz);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
 	this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
-	this.audio = '/../resources/'+this.quiz.sound.file;
+	this.audio = this.quiz.sound.file;
 
 	console.log(this.quiz);
 
@@ -32,7 +33,7 @@ angular.module('app.controllers')
 		this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
 		this.attempted = [false, false, false, false];
 		this.complete = false;
-		this.audio = '/../resources/'+this.quiz.sound.file;
+		this.audio = this.quiz.sound.file;
 		source.src = this.audio;
 		audio.load();
 		$localStorage.gameProgress[$stateParams.pack] = this.id;
