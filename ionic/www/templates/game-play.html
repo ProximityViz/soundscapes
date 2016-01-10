@@ -9,7 +9,7 @@
     <div class="audio-photo">
       <div class="audio">
         <audio id="audio" controls class="inline">
-          <source id="source" ng-src="{{gamePlay.audio}}">
+          <source id="source" ng-src="{{gamePlay.audio}}" ng-click="gamePlay.audioTapped()">
           Your browser does not support the audio element.
         </audio>
         <div ng-bind-html="gamePlay.quiz.sound.info"></div>
@@ -21,6 +21,7 @@
     </div>
     <div class="container">
       <div class="choice" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
+        <div class="time-bar-not-animated"></div>
         <button ng-style="{'background-image':'url(/../resources/'+spectrogram.file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
         <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal($index)"></button>
       </div>

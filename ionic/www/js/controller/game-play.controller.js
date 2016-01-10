@@ -64,4 +64,30 @@ angular.module('app.controllers')
 		$scope.spectrogram = this.quiz.spectrograms[index];
 		$scope.spectrogramModal.show();
 	}
+
+	// when the audio play button is pressed,
+	// start animation
+	// when the pause button is pressed,
+	// pause animation
+	this.audioTapped = function() {
+		console.log("audio");
+	}
+	var player = document.getElementById("audio");
+	var elements = document.getElementsByClassName("time-bar-not-animated");
+	player.onplay = function() {
+		console.log("audio playing");
+		// add time-bar class
+		angular.element(elements).addClass("time-bar");
+	};
+	player.onpause = function() {
+		console.log("audio paused");
+		// remove time-bar class (for now)
+		angular.element(elements).removeClass("time-bar");
+	};
+	player.onended = function() {
+		console.log("audio ended");
+		// remove time-bar class
+		angular.element(elements).removeClass("time-bar");
+	};
+
 }]);

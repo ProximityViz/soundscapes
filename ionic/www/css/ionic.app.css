@@ -9740,6 +9740,12 @@ a.button {
     background-repeat: no-repeat;
     background-position: center center; }
 
+@keyframes time {
+  from {
+    left: 0; }
+  to {
+    left: calc(100% - 1px); } }
+
 ion-view.game-play-view .next {
   height: 44px; }
 
@@ -9815,6 +9821,20 @@ ion-view.game-play-view .audio-photo {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; }
+
+ion-view.game-play-view .time-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  height: calc(100% - 10px);
+  width: 1px;
+  background-color: #000;
+  animation-name: time;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  padding: 0px;
+  z-index: 10; }
 
 ion-view.explore-view .photo, ion-view.explore-view .spectrogram {
   display: inline-block;

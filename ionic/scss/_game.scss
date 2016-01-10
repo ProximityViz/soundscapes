@@ -8,6 +8,10 @@
     background-position: center center; 
   }
 }
+@keyframes time {
+  from {left: 0;}
+  to {left: calc(100% - 1px);} // calc(100% - 3px)
+}
 ion-view.game-play-view {
   .next {
     height: 44px;
@@ -92,5 +96,19 @@ ion-view.game-play-view {
       background-repeat: no-repeat;
       background-position: center center;
     }
+  }
+  .time-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10px;
+    height: calc(100% - 10px);
+    width: 1px;
+    background-color: #000;
+    animation-name: time;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    padding: 0px;
+    z-index: 10;
   }
 }
