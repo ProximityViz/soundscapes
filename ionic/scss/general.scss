@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Belleza';
+  src: url('../resources/Belleza-Regular.ttf') format('truetype');
+}
+
+ion-content {
+  background-color: $positive;
+  color: #fff;
+  font-family: 'Belleza', Arial;
+}
+ion-nav-bar {
+  background-color: $positive;
+  .back-text {
+    font-family: 'Belleza', Arial;
+  }
+}
+.title {
+  font-family: 'Belleza', Arial;
+  font-variant: small-caps;
+}

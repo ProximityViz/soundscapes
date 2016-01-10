@@ -1,0 +1,19 @@
+ion-view.nav,
+ion-view.game {
+  .button {
+    background-color: $light;
+    color: $energized;
+    font-family: 'Belleza';
+    // text-transform: uppercase;
+    font-variant: small-caps;
+    height: 100px;
+    font-size: 30px;
+    &.activated {
+      background-color: $light;
+      color: $positive;
+    }
+    &:hover {
+      color: $positive;
+    }
+  }
+}
