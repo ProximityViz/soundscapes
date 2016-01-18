@@ -1211,10 +1211,8 @@ angular.module('app')
       return npsPack[id];
     }
 
-    function getQuiz(packName, sound) {
-      console.log(packName);
-      console.log(sound);
-      var pack = packs[packName].pack;
+    function getQuiz(packName, sound) {      
+      var pack = angular.copy(packs[packName].pack);
       var quiz = {};
       quiz.title = pack[sound].title;
       quiz.image = pack[sound].image;
