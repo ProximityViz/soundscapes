@@ -2,8 +2,8 @@
   <ion-nav-buttons side="left">
   </ion-nav-buttons>
   <ion-content class="padding">
-    <button class="button button-positive button-block" ui-sref="explore-pack({pack: 'NPS'})">
-      NPS pack
+    <button class="button button-positive button-block" ng-repeat="pack in packs.packs" ui-sref="explore-pack({pack: pack.shortTitle})">
+      {{pack.title}} pack
     </button>
     <button class="button button-positive button-block">
       Get more packs

@@ -41,7 +41,8 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
   })
   .state('game', {
     url: '/game',
-    templateUrl: 'templates/game.html'
+    templateUrl: 'templates/game.html',
+    controller: 'PacksCtrl as packs'
   })
   .state('game-pack', {
     url: '/game/:pack/',
@@ -50,7 +51,8 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
   })
   .state('explore', {
     url: '/explore',
-    templateUrl: 'templates/explore.html'
+    templateUrl: 'templates/explore.html',
+    controller: 'PacksCtrl as packs'
   })
   .state('explore-pack', {
     url: '/explore/:pack/',
