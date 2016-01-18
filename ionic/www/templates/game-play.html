@@ -22,8 +22,9 @@
     <div class="container">
       <div class="choice" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
         <div class="time-bar-not-animated"></div>
-        <button ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram button" ng-class="{attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
-        <button class="zoom-button icon ion-android-open" ng-click="gamePlay.showSpectrogramModal($index)"></button>
+        <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div>
+        <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
+        <button class="zoom-button button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal($index)"></button>
       </div>
     </div>
   </ion-content>

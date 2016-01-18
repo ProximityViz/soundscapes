@@ -20,9 +20,13 @@ angular.module('app.controllers')
 	this.complete = false;
 
 	this.choose = function(choice) {
-		if (!this.complete) {
-			this.complete = this.quiz.correctSpectrogramIndex === choice;
-			this.attempted[choice] = true;
+		if (!this.complete) { // keep people from guesing after they've gotten in right
+			if (this.quiz.correctSpectrogramIndex === choice) {
+				this.complete = true;
+				this.attempted[choice] = "correct";
+			} else {
+				this.attempted[choice] = "incorrect";
+			}
 		};
 	};
 

@@ -1158,7 +1158,7 @@ angular.module('app')
         title: 'Great Horned Owl with traffic, birds, roosters',
         category: 'Arabia Mountain',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1175,7 +1175,7 @@ angular.module('app')
         title: 'Upland Chorus Frogs',
         category: 'Arabia Mountain',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1192,7 +1192,7 @@ angular.module('app')
         title: 'Barred Owl with Frog Plop',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1209,7 +1209,7 @@ angular.module('app')
         title: 'Barred Owl, distant',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1226,7 +1226,7 @@ angular.module('app')
         title: 'Black Crowned Night Heron',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1243,7 +1243,7 @@ angular.module('app')
         title: 'Breaking Wave',
         category: 'Cumberland Island',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1260,7 +1260,7 @@ angular.module('app')
         title: 'Breaking Wave',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1277,7 +1277,7 @@ angular.module('app')
         title: 'Frog & Barred Owl',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1294,7 +1294,7 @@ angular.module('app')
         title: 'Lapping Waves, Sunny Day',
         category: 'Cumberland Island',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1311,7 +1311,7 @@ angular.module('app')
         title: 'Plane - High to Low',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1328,7 +1328,7 @@ angular.module('app')
         title: 'Plane - Low',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1345,7 +1345,7 @@ angular.module('app')
         title: 'Red Tailed Hawk',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1362,7 +1362,7 @@ angular.module('app')
         title: 'Sand Sizzle',
         category: 'Cumberland Island',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
@@ -1379,7 +1379,7 @@ angular.module('app')
         title: 'Sandhill Crane with Takeoff',
         category: 'Okefenokee Swamp',
         image: {
-          file: '',
+          file: 'placeholder.png',
           info: '',
           credit: ''
         },
