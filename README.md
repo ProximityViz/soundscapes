@@ -29,3 +29,6 @@
 * Change the last line of spectrogram.py to reference the relevant wav file
 * Run `python spectrogram.py`
 * Save the image
+* Canvas size: 1400 x 750, anchor center
+* Canvas size: 1250 x 750, anchor left
+* Resave

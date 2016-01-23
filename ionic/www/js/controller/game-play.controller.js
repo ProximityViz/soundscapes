@@ -5,6 +5,24 @@ angular.module('app.controllers')
 
 	$ionicConfig.backButton.previousTitleText(false);
 
+	// deal with landscape vs. portrait
+	// init
+	$scope.orientation = window.innerWidth >= window.innerHeight ? "landscape" : "portrait";
+	var previousOrientation = window.innerWidth >= window.innerHeight ? "landscape" : "portrait";
+
+	// resize
+	window.onresize = function(event) {
+		if (typeof $scope.orientation != 'undefined') { 
+			previousOrientation = angular.copy($scope.orientation); 
+		}
+		$scope.orientation = window.innerWidth >= window.innerHeight ? "landscape" : "portrait";
+		if (this.previousOrientation !== $scope.orientation) {
+			// refresh view so new classes are activated in ng-class="orientation === 'landscape' ? 'choice-landscape' : 'choice-portrait'"
+			$scope.$apply();
+		}
+	};
+
+	// init quiz
 	// move this into its own function so it's not all repeated
 	this.quizComplete = false;
 	this.id = $localStorage.gameProgress[$stateParams.pack] ? $localStorage.gameProgress[$stateParams.pack] : 0;
