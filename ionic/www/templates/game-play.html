@@ -22,9 +22,12 @@
     <div class="container" ng-class="{hidden: gamePlay.quizComplete}">
       <div ng-class="orientation === 'landscape' ? 'choice-landscape' : 'choice-portrait'" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
         <div class="time-bar-not-animated"></div>
-        <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div>
-        <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
-        <button class="zoom-button button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal($index)"></button>
+        <!-- <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div> -->
+        <img ng-src="{{spectrogram.file}}" class="spectrogram">
+        <div class="buttons">
+          <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
+          <button class="zoom-button button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal($index)"></button>
+        </div>
       </div>
     </div>
     <!-- this is shown when the pack is completed -->

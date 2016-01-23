@@ -20,29 +20,60 @@ ion-view.game-play-view {
     //                   nav bar  padding
     height: calc(100vh - 44px   - 24px);
   }
+  div.audio-photo {
+    width: 100%;
+    height: calc(28vh - 44px - 24px);
+    .audio {
+      display: inline-block;
+      min-width: 300px;
+      margin-right: 10px;
+      width: calc(50% - 10px);
+      vertical-align: top;
+    }
+    .photo {
+      display: inline-block;
+      width: calc(100% - 20px - 300px);
+      // width: 1024px;
+      max-width: calc(50% - 10px);
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
   div.choice-landscape {
     width: 50%;
-    height: 40%;
+    height: 36vh;
     position: relative;
     display: inline-block;
+    .spectrogram { // these are no longer 2:1; now 5:3
+      width: calc(50vw - 8vh - 40px);
+      max-height: calc(36vh - 10px);
+      max-width: calc(60vh - 20px);
+    }
   }
-  div.choice-portrait,
-  .audio-photo {
+  div.choice-portrait {
     width: 100%;
-    height: 20%;
+    height: 18vh;
     position: relative;
+    .spectrogram { // these are no longer 2:1; now 5:3
+      width: calc(30vh - 20px);
+      max-width: calc(91vh - 30px);
+      height: calc(18vh - 10px);
+    }
   }
   div.choice-portrait,
   div.choice-landscape,
   .audio-photo {
+    border: 1px solid #4C4C4C;
     .spectrogram {
-      position: absolute;
-      width: calc(100% - 30px - 8vh);
-      height: calc(100% - 10px);
+      // position: absolute;
+      // width: calc(100% - 30px - 8vh);
+      // height: calc(100% - 10px);
+      position: relative;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      border: 1px solid #4C4C4C;
       margin-top: 10px;
     }
     .attempted {
@@ -100,23 +131,6 @@ ion-view.game-play-view {
       &:before {
         font-size: 4vh;
       }
-    }
-    .audio {
-      display: inline-block;
-      min-width: 300px;
-      margin-right: 10px;
-      width: calc(50% - 10px);
-      vertical-align: top;
-    }
-    .photo {
-      display: inline-block;
-      width: calc(100% - 20px - 300px);
-      // width: 1024px;
-      max-width: calc(50% - 10px);
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
     }
   }
   .time-bar {
