@@ -6,7 +6,9 @@ angular.module('app.controllers')
 	$ionicConfig.backButton.previousTitleText(false);
 
 	// move this into its own function so it's not all repeated
+	this.quizComplete = false;
 	this.id = $localStorage.gameProgress[$stateParams.pack] ? $localStorage.gameProgress[$stateParams.pack] : 0;
+	// this.id = 13;
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 	console.log(this.quiz);
 	this.packName = this.quiz.packTitle;
@@ -31,17 +33,25 @@ angular.module('app.controllers')
 	};
 
 	this.advance = function() {
-		this.id++;
-		this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
-		this.number = parseInt(this.id) + 1;
-		this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
-		this.attempted = [false, false, false, false];
-		this.complete = false;
-		this.audio = this.quiz.sound.file;
-		source.src = this.audio;
-		audio.load();
-		$localStorage.gameProgress[$stateParams.pack] = this.id;
-		console.log(this.id);
+		if (this.number == this.quiz.packSize) {
+			this.complete = false;
+			this.quizComplete = true;
+			console.log("advance to completion screen");
+			this.quiz.title = "Pack Complete!";
+			$localStorage.gameProgress[$stateParams.pack] = 0;
+		} else {
+			this.id++;
+			this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
+			this.number = parseInt(this.id) + 1;
+			this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
+			this.attempted = [false, false, false, false];
+			this.complete = false;
+			this.audio = this.quiz.sound.file;
+			source.src = this.audio;
+			audio.load();
+			$localStorage.gameProgress[$stateParams.pack] = this.id;
+			console.log(this.id);
+		}
 	};
 
 	$ionicModal.fromTemplateUrl('templates/photo-modal.html', {

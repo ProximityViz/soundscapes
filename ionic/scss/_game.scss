@@ -128,4 +128,15 @@ ion-view.game-play-view {
     padding: 0px;
     z-index: 10;
   }
+  div.pack-complete {
+    font-size: 32px;
+    line-height: 52px;
+    text-align: center;
+  }
+  button.return-to-menu {
+    width: 200px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 100px);
+  }
 }

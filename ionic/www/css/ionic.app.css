@@ -9740,6 +9740,9 @@ ion-nav-bar {
   font-family: 'Belleza', Arial;
   font-variant: small-caps; }
 
+.hidden {
+  display: none; }
+
 ion-view.nav .button,
 ion-view.game .button {
   background-color: #fff;
@@ -9870,6 +9873,17 @@ ion-view.game-play-view .time-bar {
   animation-timing-function: linear;
   padding: 0px;
   z-index: 10; }
+
+ion-view.game-play-view div.pack-complete {
+  font-size: 32px;
+  line-height: 52px;
+  text-align: center; }
+
+ion-view.game-play-view button.return-to-menu {
+  width: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 100px); }
 
 ion-view.explore-view .photo, ion-view.explore-view .spectrogram {
   display: inline-block;

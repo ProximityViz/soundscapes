@@ -6,7 +6,7 @@
     <button class="button button-positive" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next</button>
   </ion-nav-buttons>
   <ion-content class="padding" scroll="false">
-    <div class="audio-photo">
+    <div class="audio-photo" ng-class="{hidden: gamePlay.quizComplete}">
       <div class="audio">
         <audio id="audio" controls class="inline">
           <source id="source" ng-src="{{gamePlay.audio}}" ng-click="gamePlay.audioTapped()">
@@ -19,7 +19,7 @@
       <div class="photo" ng-style="{'background-image':'url(/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
       </div>
     </div>
-    <div class="container">
+    <div class="container" ng-class="{hidden: gamePlay.quizComplete}">
       <div class="choice" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
         <div class="time-bar-not-animated"></div>
         <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div>
@@ -27,5 +27,10 @@
         <button class="zoom-button button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal($index)"></button>
       </div>
     </div>
+    <!-- this is shown when the pack is completed -->
+    <div class="pack-complete padding" ng-class="{hidden: !gamePlay.quizComplete}">
+      Congratulations! You have completed the {{gamePlay.packName}} Pack!<br>
+    </div>
+    <button class="return-to-menu button icon ion-arrow-left-a" ng-class="{hidden: !gamePlay.quizComplete}" ng-click="$ionicGoBack()"> Return to Menu</button>
   </ion-content>
 </ion-view>
