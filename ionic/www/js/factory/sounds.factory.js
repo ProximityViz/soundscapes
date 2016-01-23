@@ -1155,23 +1155,6 @@ angular.module('app')
 
     var sw1Pack = [
       {
-        title: 'Great Horned Owl with traffic, birds, roosters',
-        category: 'Arabia Mountain',
-        image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
-        },
-        sound: {
-          file: 'Great Horned Owl - w_lots of anthrophony -  Arabia.mp3',
-          info: 'This sound was recorded at Arabia Mountain National Heritage Area in Georgia.',
-          credit: 'Stephen Wood'
-        },
-        spectrogram: {
-          file: 'Spectro_Arabia-Great-Horned-Owl.png',
-          credit: 'Stephen Wood'
-        }
-      },{
         title: 'Upland Chorus Frogs',
         category: 'Arabia Mountain',
         image: {
@@ -1189,20 +1172,37 @@ angular.module('app')
           credit: 'Stephen Wood'
         }
       },{
-        title: 'Barred Owl with Frog Plop',
-        category: 'Okefenokee Swamp',
+        title: 'Lapping Waves, Sunny Day',
+        category: 'Cumberland Island',
         image: {
           file: 'placeholder.png',
           info: '',
           credit: ''
         },
         sound: {
-          file: 'Barred Owl -frog plop - oke.mp3',
-          info: 'This sound was recorded at Okefenokee Swamp in Georgia.',
+          file: 'lapping waves, sunny day - cumberland.mp3',
+          info: 'This sound was recorded at Cumberland Island National Seashore in Georgia.',
           credit: 'Stephen Wood'
         },
         spectrogram: {
-          file: 'Spectro_Oke-Barred-Owl-frog-plop.png',
+          file: 'Spectro_Cumberland-lapping-waves.png',
+          credit: 'Stephen Wood'
+        }
+      },{
+        title: 'Breaking Wave',
+        category: 'Cumberland Island',
+        image: {
+          file: 'placeholder.png',
+          info: '',
+          credit: ''
+        },
+        sound: {
+          file: 'breaking wave - cumberland.mp3',
+          info: 'This sound was recorded at Cumberland Island National Seashore in Georgia.',
+          credit: 'Stephen Wood'
+        },
+        spectrogram: {
+          file: 'Spectro_Cumberland-breaking-wave.png',
           credit: 'Stephen Wood'
         }
       },{
@@ -1240,7 +1240,41 @@ angular.module('app')
           credit: 'Stephen Wood'
         }
       },{
-        title: 'Breaking Wave',
+        title: 'Plane - Low',
+        category: 'Okefenokee Swamp',
+        image: {
+          file: 'placeholder.png',
+          info: '',
+          credit: ''
+        },
+        sound: {
+          file: 'Plane - low.mp3',
+          info: 'This sound was recorded at Okefenokee Swamp in Georgia.',
+          credit: 'Stephen Wood'
+        },
+        spectrogram: {
+          file: 'Spectro_Oke-plane-low.png',
+          credit: 'Stephen Wood'
+        }
+      },{
+        title: 'Barred Owl with Frog Plop',
+        category: 'Okefenokee Swamp',
+        image: {
+          file: 'placeholder.png',
+          info: '',
+          credit: ''
+        },
+        sound: {
+          file: 'Barred Owl -frog plop - oke.mp3',
+          info: 'This sound was recorded at Okefenokee Swamp in Georgia.',
+          credit: 'Stephen Wood'
+        },
+        spectrogram: {
+          file: 'Spectro_Oke-Barred-Owl-frog-plop.png',
+          credit: 'Stephen Wood'
+        }
+      },{
+        title: 'Sand Sizzle',
         category: 'Cumberland Island',
         image: {
           file: 'placeholder.png',
@@ -1248,12 +1282,12 @@ angular.module('app')
           credit: ''
         },
         sound: {
-          file: 'breaking wave - cumberland.mp3',
+          file: 'sand sizzle - cumberland.mp3',
           info: 'This sound was recorded at Cumberland Island National Seashore in Georgia.',
           credit: 'Stephen Wood'
         },
         spectrogram: {
-          file: 'Spectro_Cumberland-breaking-wave.png',
+          file: 'Spectro_Cumberland-sand-sizzle.png',
           credit: 'Stephen Wood'
         }
       },{
@@ -1274,37 +1308,20 @@ angular.module('app')
           credit: 'Stephen Wood'
         }
       },{
-        title: 'Frog & Barred Owl',
-        category: 'Okefenokee Swamp',
+        title: 'Great Horned Owl with traffic, birds, roosters',
+        category: 'Arabia Mountain',
         image: {
           file: 'placeholder.png',
           info: '',
           credit: ''
         },
         sound: {
-          file: 'frog_Barred Owl - oke.mp3',
-          info: 'This sound was recorded at Okefenokee Swamp in Georgia.',
+          file: 'Great Horned Owl - w_lots of anthrophony -  Arabia.mp3',
+          info: 'This sound was recorded at Arabia Mountain National Heritage Area in Georgia.',
           credit: 'Stephen Wood'
         },
         spectrogram: {
-          file: 'Spectro_Oke-frog-barred-owl.png',
-          credit: 'Stephen Wood'
-        }
-      },{
-        title: 'Lapping Waves, Sunny Day',
-        category: 'Cumberland Island',
-        image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
-        },
-        sound: {
-          file: 'lapping waves, sunny day - cumberland.mp3',
-          info: 'This sound was recorded at Cumberland Island National Seashore in Georgia.',
-          credit: 'Stephen Wood'
-        },
-        spectrogram: {
-          file: 'Spectro_Cumberland-lapping-waves.png',
+          file: 'Spectro_Arabia-Great-Horned-Owl.png',
           credit: 'Stephen Wood'
         }
       },{
@@ -1325,7 +1342,7 @@ angular.module('app')
           credit: 'Stephen Wood'
         }
       },{
-        title: 'Plane - Low',
+        title: 'Frog & Barred Owl',
         category: 'Okefenokee Swamp',
         image: {
           file: 'placeholder.png',
@@ -1333,12 +1350,12 @@ angular.module('app')
           credit: ''
         },
         sound: {
-          file: 'Plane - low.mp3',
+          file: 'frog_Barred Owl - oke.mp3',
           info: 'This sound was recorded at Okefenokee Swamp in Georgia.',
           credit: 'Stephen Wood'
         },
         spectrogram: {
-          file: 'Spectro_Oke-plane-low.png',
+          file: 'Spectro_Oke-frog-barred-owl.png',
           credit: 'Stephen Wood'
         }
       },{
@@ -1356,23 +1373,6 @@ angular.module('app')
         },
         spectrogram: {
           file: 'Spectro_Oke-Red-Tailed-Hawk.png',
-          credit: 'Stephen Wood'
-        }
-      },{
-        title: 'Sand Sizzle',
-        category: 'Cumberland Island',
-        image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
-        },
-        sound: {
-          file: 'sand sizzle - cumberland.mp3',
-          info: 'This sound was recorded at Cumberland Island National Seashore in Georgia.',
-          credit: 'Stephen Wood'
-        },
-        spectrogram: {
-          file: 'Spectro_Cumberland-sand-sizzle.png',
           credit: 'Stephen Wood'
         }
       },{
@@ -1396,15 +1396,15 @@ angular.module('app')
     ];
 
     var packs = {
-      'NPS': {
-        shortTitle: 'NPS',
-        title: 'NPS',
-        pack: npsPack
-      },
       'SW1': {
         shortTitle: 'SW1',
         title: 'Stephen Wood - Georgia',
         pack: sw1Pack
+      },
+      'NPS': {
+        shortTitle: 'NPS',
+        title: 'NPS',
+        pack: npsPack
       }
     };
 
