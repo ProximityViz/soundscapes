@@ -1437,13 +1437,13 @@ angular.module('app')
     function getExplore(packName) {
       var pack = packs[packName];
       var explorePack = angular.copy(pack);
-      var categories = getCategories(pack.pack);
+      var categories = getCategories(explorePack.pack);
       categories.sort();
       explorePack.pack = [];
       // add cards for each category
       for (var category in categories) {
         explorePack.pack.push({'category': categories[category]});
-        explorePack.pack[category].cards = pack.pack.filter(function (value, index, array) {
+        explorePack.pack[category].cards = angular.copy(pack).pack.filter(function (value, index, array) {
           return (value.category === categories[category]);
         });
         // inside each category, sort by title
@@ -1451,9 +1451,9 @@ angular.module('app')
         // adjust paths of resources
         for (var i in explorePack.pack[category].cards) {
           var card = explorePack.pack[category].cards[i];
-          card.image.file = "../resources/" + packName + '/' + card.image.file;
-          card.sound.file = "../resources/" + packName + '/' + card.sound.file;
-          card.spectrogram.file = "../resources/" + packName + '/' + card.spectrogram.file;
+          card.image.file = "resources/" + packName + '/' + card.image.file;
+          card.sound.file = "resources/" + packName + '/' + card.sound.file;
+          card.spectrogram.file = "resources/" + packName + '/' + card.spectrogram.file;
         }
       };
       return explorePack;
@@ -1469,8 +1469,8 @@ angular.module('app')
       quiz.title = pack[sound].title;
       quiz.image = pack[sound].image;
       quiz.sound = pack[sound].sound;
-      quiz.image.file = "../resources/" + packName + '/' + quiz.image.file;
-      quiz.sound.file = "../resources/" + packName + '/' + quiz.sound.file;
+      quiz.image.file = "resources/" + packName + '/' + quiz.image.file;
+      quiz.sound.file = "resources/" + packName + '/' + quiz.sound.file;
       quiz.correctSpectrogramIndex = Math.floor(Math.random() * 4);
       quiz.spectrograms = ["", "", "", ""];
       quiz.spectrograms[quiz.correctSpectrogramIndex] = pack[sound].spectrogram;
@@ -1485,7 +1485,7 @@ angular.module('app')
           // splice it from remainingSpectrograms
           remainingSpectrograms.splice(index, 1);
         }
-        quiz.spectrograms[i].file = "../resources/" + packName + '/' + quiz.spectrograms[i].file;
+        quiz.spectrograms[i].file = "resources/" + packName + '/' + quiz.spectrograms[i].file;
       }
       quiz.remainingSpectrograms = remainingSpectrograms;
       quiz.packTitle = packs[packName].title;
