@@ -21,7 +21,9 @@
     </div>
     <div class="container" ng-class="{hidden: gamePlay.quizComplete}">
       <div ng-class="orientation === 'landscape' ? 'choice-landscape' : 'choice-portrait'" ng-repeat="spectrogram in gamePlay.quiz.spectrograms">
-        <div class="time-bar-not-animated"></div>
+        <div class="time-bar-container">
+          <div class="time-bar-not-animated"></div>
+        </div>
         <!-- <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div> -->
         <img ng-src="{{spectrogram.file}}" class="spectrogram">
         <div class="buttons">

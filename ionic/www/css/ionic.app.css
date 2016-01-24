@@ -9781,8 +9781,9 @@ ion-view.game-play-view div.container {
   height: calc(100vh - 44px   - 24px); }
 
 ion-view.game-play-view div.audio-photo {
+  margin-bottom: 10px;
   width: 100%;
-  height: calc(28vh - 44px - 24px); }
+  height: calc(28vh - 44px - 30px); }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;
@@ -9799,106 +9800,109 @@ ion-view.game-play-view div.audio-photo {
     background-position: center center; }
 
 ion-view.game-play-view div.choice-landscape {
+  border: 1px solid #4C4C4C;
   width: 50%;
   height: 36vh;
   position: relative;
   display: inline-block; }
   ion-view.game-play-view div.choice-landscape .spectrogram {
-    width: calc(50vw - 8vh - 40px);
+    width: calc(50vw - 8vh - 34px);
     max-height: calc(36vh - 10px);
+    max-width: calc(60vh - 20px); }
+  ion-view.game-play-view div.choice-landscape .time-bar-container {
+    left: 4vw;
+    width: calc(40vw - 8vh - 34px);
     max-width: calc(60vh - 20px); }
 
 ion-view.game-play-view div.choice-portrait {
+  border: 1px solid #4C4C4C;
   width: 100%;
   height: 18vh;
   position: relative; }
   ion-view.game-play-view div.choice-portrait .spectrogram {
-    width: calc(30vh - 20px);
+    width: calc(30vh);
     max-width: calc(91vh - 30px);
-    height: calc(18vh - 10px); }
+    height: calc(18vh); }
+  ion-view.game-play-view div.choice-portrait .time-bar-container {
+    left: 3vw;
+    width: calc(30vh - 7vw);
+    max-width: calc(91vh - 30px); }
 
-ion-view.game-play-view div.choice-portrait,
-ion-view.game-play-view div.choice-landscape,
-ion-view.game-play-view .audio-photo {
-  border: 1px solid #4C4C4C; }
-  ion-view.game-play-view div.choice-portrait .spectrogram,
-  ion-view.game-play-view div.choice-landscape .spectrogram,
-  ion-view.game-play-view .audio-photo .spectrogram {
-    position: relative;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    margin-top: 10px; }
-  ion-view.game-play-view div.choice-portrait .attempted,
-  ion-view.game-play-view div.choice-landscape .attempted,
-  ion-view.game-play-view .audio-photo .attempted {
-    color: #fff; }
-    ion-view.game-play-view div.choice-portrait .attempted:after,
-    ion-view.game-play-view div.choice-landscape .attempted:after,
-    ion-view.game-play-view .audio-photo .attempted:after {
-      position: absolute;
-      text-align: center;
-      vertical-align: middle;
-      color: #fff;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0.5;
-      border-radius: 4px; }
-    ion-view.game-play-view div.choice-portrait .attempted.correct,
-    ion-view.game-play-view div.choice-landscape .attempted.correct,
-    ion-view.game-play-view .audio-photo .attempted.correct {
-      background-color: green; }
-    ion-view.game-play-view div.choice-portrait .attempted:not(.correct),
-    ion-view.game-play-view div.choice-landscape .attempted:not(.correct),
-    ion-view.game-play-view .audio-photo .attempted:not(.correct) {
-      background-color: red; }
-  ion-view.game-play-view div.choice-portrait .select-button,
-  ion-view.game-play-view div.choice-landscape .select-button,
-  ion-view.game-play-view .audio-photo .select-button {
+ion-view.game-play-view div.choice-portrait .spectrogram,
+ion-view.game-play-view div.choice-landscape .spectrogram {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+ion-view.game-play-view div.choice-portrait .attempted,
+ion-view.game-play-view div.choice-landscape .attempted {
+  color: #fff; }
+  ion-view.game-play-view div.choice-portrait .attempted:after,
+  ion-view.game-play-view div.choice-landscape .attempted:after {
     position: absolute;
-    right: 10px;
-    top: 20px;
-    width: 8vh;
-    height: calc(50% - 20px);
-    background-color: #fff;
-    border: 1px solid #333;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
     border-radius: 4px; }
-    ion-view.game-play-view div.choice-portrait .select-button:before,
-    ion-view.game-play-view div.choice-landscape .select-button:before,
-    ion-view.game-play-view .audio-photo .select-button:before {
-      font-size: 3vh; }
-  ion-view.game-play-view div.choice-portrait .zoom-button,
-  ion-view.game-play-view div.choice-landscape .zoom-button,
-  ion-view.game-play-view .audio-photo .zoom-button {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    width: 8vh;
-    height: calc(50% - 20px);
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    color: #fff; }
-    ion-view.game-play-view div.choice-portrait .zoom-button:before,
-    ion-view.game-play-view div.choice-landscape .zoom-button:before,
-    ion-view.game-play-view .audio-photo .zoom-button:before {
-      font-size: 4vh; }
+  ion-view.game-play-view div.choice-portrait .attempted.correct,
+  ion-view.game-play-view div.choice-landscape .attempted.correct {
+    background-color: green; }
+  ion-view.game-play-view div.choice-portrait .attempted:not(.correct),
+  ion-view.game-play-view div.choice-landscape .attempted:not(.correct) {
+    background-color: red; }
 
-ion-view.game-play-view .time-bar {
+ion-view.game-play-view div.choice-portrait .select-button,
+ion-view.game-play-view div.choice-landscape .select-button {
   position: absolute;
-  left: 0;
-  right: 0;
+  right: 10px;
   top: 10px;
-  height: calc(100% - 10px);
-  width: 1px;
-  background-color: #000;
-  animation-name: time;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  padding: 0px;
-  z-index: 10; }
+  width: 8vh;
+  height: calc(50% - 15px);
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px; }
+  ion-view.game-play-view div.choice-portrait .select-button:before,
+  ion-view.game-play-view div.choice-landscape .select-button:before {
+    font-size: 3vh; }
+
+ion-view.game-play-view div.choice-portrait .zoom-button,
+ion-view.game-play-view div.choice-landscape .zoom-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 8vh;
+  height: calc(50% - 15px);
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff; }
+  ion-view.game-play-view div.choice-portrait .zoom-button:before,
+  ion-view.game-play-view div.choice-landscape .zoom-button:before {
+    font-size: 4vh; }
+
+ion-view.game-play-view div.choice-portrait .time-bar-container,
+ion-view.game-play-view div.choice-landscape .time-bar-container {
+  top: 0px;
+  bottom: 0px; }
+  ion-view.game-play-view div.choice-portrait .time-bar-container .time-bar,
+  ion-view.game-play-view div.choice-landscape .time-bar-container .time-bar {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: calc(100%);
+    width: 3px;
+    background-color: #999;
+    animation-name: time;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    padding: 0px;
+    z-index: 10; }
 
 ion-view.game-play-view div.pack-complete {
   font-size: 32px;
