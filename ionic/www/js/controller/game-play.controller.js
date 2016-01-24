@@ -27,13 +27,10 @@ angular.module('app.controllers')
 	this.quizComplete = false;
 	this.id = $localStorage.gameProgress[$stateParams.pack] ? $localStorage.gameProgress[$stateParams.pack] : 0;
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
-	console.log(this.quiz);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
 	this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
 	this.audio = this.quiz.sound.file;
-
-	console.log(this.quiz);
 
 	this.attempted = [false, false, false, false];
 	this.complete = false;
@@ -66,7 +63,6 @@ angular.module('app.controllers')
 			source.src = this.audio;
 			audio.load();
 			$localStorage.gameProgress[$stateParams.pack] = this.id;
-			console.log(this.id);
 		}
 	};
 
