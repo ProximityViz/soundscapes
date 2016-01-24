@@ -6,7 +6,7 @@
     <button class="button button-positive" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next</button>
   </ion-nav-buttons>
   <ion-content class="padding" scroll="false">
-    <div class="audio-photo" ng-class="{hidden: gamePlay.quizComplete}">
+    <div class="audio-photo" ng-class="orientation === 'landscape' ? 'top-landscape' : 'top-portrait'">
       <div class="audio">
         <audio id="audio" controls class="inline">
           <source id="source" ng-src="{{gamePlay.audio}}" ng-click="gamePlay.audioTapped()">
@@ -27,6 +27,7 @@
         <!-- <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div> -->
         <img ng-src="{{spectrogram.file}}" class="spectrogram">
         <div class="buttons">
+          <div class="letter">{{$index + 1 | character}}</div>
           <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
           <button class="zoom-button button icon ion-arrow-expand" ng-click="gamePlay.showSpectrogramModal($index)"></button>
         </div>

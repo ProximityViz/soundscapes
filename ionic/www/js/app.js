@@ -62,6 +62,12 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
 
   $urlRouterProvider.otherwise('/');
 
+})
+
+.filter('character', function() {
+  return function(input) {
+    return String.fromCharCode(64 + parseInt(input, 10));
+  };
 });
 angular.module('app.controllers', []);
 
