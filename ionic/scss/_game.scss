@@ -23,7 +23,8 @@ ion-view.game-play-view {
   div.audio-photo {
     margin-bottom: 10px;
     width: 100%;
-    height: calc(28vh - 44px - 30px);
+    min-height: calc(28vh - 44px - 30px);
+    height: calc(100vh - ((50vw - 8vh - 30px) * 6 / 5) - 44px - 30px);
     .audio {
       display: inline-block;
       min-width: 300px;
@@ -34,7 +35,6 @@ ion-view.game-play-view {
     .photo {
       display: inline-block;
       width: calc(100% - 20px - 300px);
-      // width: 1024px;
       max-width: calc(50% - 10px);
       height: 100%;
       background-size: contain;
@@ -46,33 +46,38 @@ ion-view.game-play-view {
     border: 1px solid #4C4C4C;
     width: 50%;
     height: 36vh;
+    max-height: calc((50vw - 8vh - 30px) * 3 / 5);
     position: relative;
     display: inline-block;
-    .spectrogram { // these are no longer 2:1; now 5:3
+    .spectrogram,
+    .time-bar-container { // these are no longer 2:1; now 5:3
       width: calc(50vw - 8vh - 34px);
       max-height: calc(36vh - 10px);
       max-width: calc(60vh - 20px);
     }
     .time-bar-container {
-      left: 4vw;
-      width: calc(40vw - 8vh - 34px);
-      max-width: calc(60vh - 20px);
+      height: calc(36vh - 10px);
     }
+    // .time-bar-container {
+    //   left: 4vw;
+    //   width: calc(40vw - 8vh - 34px);
+    //   max-width: calc(60vh - 20px);
+    // }
   }
   div.choice-portrait {
     border: 1px solid #4C4C4C;
     width: 100%;
+    padding-left: calc((100vw - (30vh + 8vh + 24px)) / 2);
+    .select-button,
+    .zoom-button {
+      margin-right: calc(50vw - 15vh - 8vh);
+    }
     height: 18vh;
     position: relative;
-    .spectrogram { // 5:3
+    .spectrogram,
+    .time-bar-container { // 5:3
       width: calc(30vh);
-      max-width: calc(91vh - 30px);
       height: calc(18vh);
-    }
-    .time-bar-container {
-      left: 3vw;
-      width: calc(30vh - 7vw);
-      max-width: calc(91vh - 30px);
     }
   }
   div.choice-portrait,
@@ -140,13 +145,12 @@ ion-view.game-play-view {
       }
     }
     .time-bar-container {
-      top: 0px;
-      bottom: 0px;
+      position: absolute;
+      // height: 100%;
       .time-bar {
         position: absolute;
         left: 0px;
         top: 0px;
-        height: calc(100%);
         width: 3px;
         background-color: #999;
         animation-name: time;

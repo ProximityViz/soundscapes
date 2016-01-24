@@ -9783,7 +9783,8 @@ ion-view.game-play-view div.container {
 ion-view.game-play-view div.audio-photo {
   margin-bottom: 10px;
   width: 100%;
-  height: calc(28vh - 44px - 30px); }
+  min-height: calc(28vh - 44px - 30px);
+  height: calc(100vh - ((50vw - 8vh - 30px) * 6 / 5) - 44px - 30px); }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;
@@ -9803,30 +9804,30 @@ ion-view.game-play-view div.choice-landscape {
   border: 1px solid #4C4C4C;
   width: 50%;
   height: 36vh;
+  max-height: calc((50vw - 8vh - 30px) * 3 / 5);
   position: relative;
   display: inline-block; }
-  ion-view.game-play-view div.choice-landscape .spectrogram {
+  ion-view.game-play-view div.choice-landscape .spectrogram,
+  ion-view.game-play-view div.choice-landscape .time-bar-container {
     width: calc(50vw - 8vh - 34px);
     max-height: calc(36vh - 10px);
     max-width: calc(60vh - 20px); }
   ion-view.game-play-view div.choice-landscape .time-bar-container {
-    left: 4vw;
-    width: calc(40vw - 8vh - 34px);
-    max-width: calc(60vh - 20px); }
+    height: calc(36vh - 10px); }
 
 ion-view.game-play-view div.choice-portrait {
   border: 1px solid #4C4C4C;
   width: 100%;
+  padding-left: calc((100vw - (30vh + 8vh + 24px)) / 2);
   height: 18vh;
   position: relative; }
-  ion-view.game-play-view div.choice-portrait .spectrogram {
-    width: calc(30vh);
-    max-width: calc(91vh - 30px);
-    height: calc(18vh); }
+  ion-view.game-play-view div.choice-portrait .select-button,
+  ion-view.game-play-view div.choice-portrait .zoom-button {
+    margin-right: calc(50vw - 15vh - 8vh); }
+  ion-view.game-play-view div.choice-portrait .spectrogram,
   ion-view.game-play-view div.choice-portrait .time-bar-container {
-    left: 3vw;
-    width: calc(30vh - 7vw);
-    max-width: calc(91vh - 30px); }
+    width: calc(30vh);
+    height: calc(18vh); }
 
 ion-view.game-play-view div.choice-portrait .spectrogram,
 ion-view.game-play-view div.choice-landscape .spectrogram {
@@ -9888,14 +9889,12 @@ ion-view.game-play-view div.choice-landscape .zoom-button {
 
 ion-view.game-play-view div.choice-portrait .time-bar-container,
 ion-view.game-play-view div.choice-landscape .time-bar-container {
-  top: 0px;
-  bottom: 0px; }
+  position: absolute; }
   ion-view.game-play-view div.choice-portrait .time-bar-container .time-bar,
   ion-view.game-play-view div.choice-landscape .time-bar-container .time-bar {
     position: absolute;
     left: 0px;
     top: 0px;
-    height: calc(100%);
     width: 3px;
     background-color: #999;
     animation-name: time;
