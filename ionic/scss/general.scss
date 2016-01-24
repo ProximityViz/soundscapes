@@ -14,7 +14,8 @@ ion-nav-bar {
     font-family: 'Belleza', Arial;
   }
 }
-.title {
+ion-header-bar.bar .title {
+  font-size: 30px;
   font-family: 'Belleza', Arial;
   font-variant: small-caps;
 }

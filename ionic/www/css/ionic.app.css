@@ -9736,7 +9736,8 @@ ion-nav-bar {
   ion-nav-bar .back-text {
     font-family: 'Belleza', Arial; }
 
-.title {
+ion-header-bar.bar .title {
+  font-size: 30px;
   font-family: 'Belleza', Arial;
   font-variant: small-caps; }
 
@@ -9758,6 +9759,12 @@ ion-view.game .button {
   ion-view.nav .button:hover,
   ion-view.game .button:hover {
     color: #190801; }
+
+ion-view.nav .button {
+  height: calc((100vh - 115px) / 5); }
+
+span.game-title {
+  font-size: 17px; }
 
 .photo-modal {
   height: calc(100% - 44px); }
@@ -9792,7 +9799,9 @@ ion-view.game-play-view div.audio-photo {
     min-width: 300px;
     margin-right: 10px;
     width: calc(50% - 10px);
-    vertical-align: top; }
+    vertical-align: top;
+    font-size: 2.5vh;
+    line-height: 3.5vh; }
   ion-view.game-play-view div.audio-photo .photo {
     display: inline-block;
     width: calc(100% - 20px - 300px);
