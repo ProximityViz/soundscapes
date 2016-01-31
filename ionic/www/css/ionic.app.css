@@ -9745,7 +9745,8 @@ ion-header-bar.bar .title {
   display: none; }
 
 ion-view.nav .button,
-ion-view.game .button {
+ion-view.game .button,
+ion-view.explore .button {
   background-color: #fff;
   color: #a63608;
   font-family: 'Belleza';
@@ -9753,11 +9754,13 @@ ion-view.game .button {
   height: 100px;
   font-size: 30px; }
   ion-view.nav .button.activated,
-  ion-view.game .button.activated {
+  ion-view.game .button.activated,
+  ion-view.explore .button.activated {
     background-color: #fff;
     color: #190801; }
   ion-view.nav .button:hover,
-  ion-view.game .button:hover {
+  ion-view.game .button:hover,
+  ion-view.explore .button:hover {
     color: #190801; }
 
 ion-view.nav .button {
