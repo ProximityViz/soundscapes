@@ -1158,9 +1158,9 @@ angular.module('app')
         title: 'Upland Chorus Frogs',
         category: 'Arabia Mountain',
         image: {
-          file: 'placeholder.png',
+          file: 'frog.jpeg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/O-TM2E-7cn4">Photo by Wayne Robinson</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'upland chorus frogs - Arabia.mp3',
@@ -1175,9 +1175,9 @@ angular.module('app')
         title: 'Lapping Waves, Sunny Day',
         category: 'Cumberland Island',
         image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
+          file: 'lapping waves.jpeg',
+          info: '<a href="https://unsplash.com/photos/yXAtOOBwFNY">This photo was taken in Karwia, Władysławowo, Poland</a>. ',
+          credit: 'Kamil Manka, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'lapping waves, sunny day - cumberland.mp3',
@@ -1192,9 +1192,9 @@ angular.module('app')
         title: 'Breaking Wave',
         category: 'Cumberland Island',
         image: {
-          file: 'placeholder.png',
+          file: 'breaking wave.jpeg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/LiCruQYCdnc">Photo by Austin Schmid</a>, License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'breaking wave - cumberland.mp3',
@@ -1209,9 +1209,9 @@ angular.module('app')
         title: 'Barred Owl, distant',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
+          file: 'barred owl.jpeg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/ea-1v3Mp6o8">Photo by photostockeditor</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'Barred Owl, distant - oke.mp3',
@@ -1226,9 +1226,9 @@ angular.module('app')
         title: 'Black Crowned Night Heron',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
+          file: 'black crowned night heron.jpg',
+          info: 'This photo was taken on Alcatraz Island',
+          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=ECC797FE-155D-4519-3EC65BBF661176B2">NPS, public domain</a>'
         },
         sound: {
           file: 'black crowned night heron-single caw oke.mp3',
@@ -1243,9 +1243,9 @@ angular.module('app')
         title: 'Plane - Low',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
+          file: 'plane1.jpeg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/0GI_BEl6BXI">Photo by Rob Schreckhise</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'Plane - low.mp3',
@@ -1260,9 +1260,9 @@ angular.module('app')
         title: 'Barred Owl with Frog Plop',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
+          file: 'plop.jpg',
+          info: 'This photo was taken in Acadia National Park.',
+          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=F485BBE8-155D-451F-67354EEC249DC222">NPS, public domain</a>'
         },
         sound: {
           file: 'Barred Owl -frog plop - oke.mp3',
@@ -1277,9 +1277,9 @@ angular.module('app')
         title: 'Sand Sizzle',
         category: 'Cumberland Island',
         image: {
-          file: 'placeholder.png',
+          file: 'sand sizzle.jpg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/vigsqYux_-8">Photo by Sarah Bürvenich</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'sand sizzle - cumberland.mp3',
@@ -1294,9 +1294,9 @@ angular.module('app')
         title: 'Breaking Wave',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
+          file: 'wave.jpeg',
+          info: '<a href="https://unsplash.com/photos/savOaIMns3Y">This photo was taken in Bodrum, Turkey.</a>',
+          credit: 'Alia Wilhelm, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'breaking wave 2 - cumberland.mp3',
@@ -1313,7 +1313,7 @@ angular.module('app')
         image: {
           file: 'placeholder.png',
           info: '',
-          credit: ''
+          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/12826/rec/1">USFWS, public domain</a>'
         },
         sound: {
           file: 'Great Horned Owl - w_lots of anthrophony -  Arabia.mp3',
@@ -1330,7 +1330,7 @@ angular.module('app')
         image: {
           file: 'placeholder.png',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/oLU4_n6c2CY">Photo by Daria Sukhorukova</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'Plane - high to low - oke.mp3',
@@ -1345,9 +1345,9 @@ angular.module('app')
         title: 'Frog & Barred Owl',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
-          info: '',
-          credit: ''
+          file: 'barred owl.jpg',
+          info: 'This photo was taken in South Carolina, U.S.',
+          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/14142/rec/1">Mark Musselman/National Audubon Society, U.S. Fish and Wildlife Service, public domain</a>'
         },
         sound: {
           file: 'frog_Barred Owl - oke.mp3',
@@ -1362,9 +1362,9 @@ angular.module('app')
         title: 'Red Tailed Hawk',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
+          file: 'hawk.jpeg',
           info: '',
-          credit: ''
+          credit: '<a href="https://unsplash.com/photos/-EesKmt5kN4">Photo by Roland Seifert</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'Red Tailed Hawk - oke.mp3',
@@ -1379,9 +1379,9 @@ angular.module('app')
         title: 'Sandhill Crane with Takeoff',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
+          file: 'sandhill crane.jpg',
           info: '',
-          credit: ''
+          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/11258/rec/33">USFWS, public domain</a>'
         },
         sound: {
           file: 'Sandhill w_take off - oke.mp3',
