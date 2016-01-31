@@ -1209,9 +1209,9 @@ angular.module('app')
         title: 'Barred Owl, distant',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'barred-owl.jpeg',
-          info: '',
-          credit: '<a href="https://unsplash.com/photos/ea-1v3Mp6o8">Photo by photostockeditor</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
+          file: 'barred-owl2.jpg',
+          info: 'This photo was taken in the Chattahoochee River National Recreation Area.',
+          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=BB556233-1DD8-B71C-070BB85E8F28D5B6">NPS, public domain</a>'
         },
         sound: {
           file: 'Barred Owl, distant - oke.mp3',
@@ -1362,9 +1362,9 @@ angular.module('app')
         title: 'Red Tailed Hawk',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'hawk.jpeg',
-          info: '',
-          credit: '<a href="https://unsplash.com/photos/-EesKmt5kN4">Photo by Roland Seifert</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
+          file: 'red-tailed-hawk.jpg',
+          info: 'This photo was taken in Tonto National Monument.',
+          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=6ADEA671-155D-451F-678CFDAAAE296CAF">NPS, public domain</a>'
         },
         sound: {
           file: 'Red Tailed Hawk - oke.mp3',
