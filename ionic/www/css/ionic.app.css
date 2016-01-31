@@ -9784,8 +9784,14 @@ span.game-title {
   to {
     left: calc(100% - 1px); } }
 
-ion-view.game-play-view .next {
-  height: 44px; }
+button.button.next-button {
+  font-size: 20px;
+  line-height: 28px;
+  background-color: green;
+  color: #fff;
+  border-radius: 0;
+  border: 1px solid #fff;
+  width: 100px; }
 
 ion-view.game-play-view div.container {
   height: calc(100vh - 44px   - 24px    - 20px); }

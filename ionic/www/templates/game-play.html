@@ -3,7 +3,7 @@
     {{gamePlay.quiz.title}}
   </ion-nav-title>
   <ion-nav-buttons side="right">
-    <button class="button button-positive" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next</button>
+    <button class="button next-button icon-right ion-arrow-right-a" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next&nbsp;</button>
   </ion-nav-buttons>
   <ion-content class="padding" scroll="false">
     <div class="audio-photo" ng-class="orientation === 'landscape' ? 'top-landscape' : 'top-portrait'" ng-hide="gamePlay.quizComplete">
