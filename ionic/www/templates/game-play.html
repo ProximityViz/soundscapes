@@ -26,7 +26,7 @@
           <div class="time-bar-not-animated"></div>
         </div>
         <!-- <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div> -->
-        <img ng-src="{{spectrogram.file}}" class="spectrogram">
+        <img ng-src="{{spectrogram.file}}" class="spectrogram" ng-click="gamePlay.choose($index)">
         <div class="buttons">
           <div class="letter">{{$index + 1 | character}}</div>
           <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>
