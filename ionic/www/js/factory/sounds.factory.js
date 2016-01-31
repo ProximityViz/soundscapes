@@ -1158,9 +1158,9 @@ angular.module('app')
         title: 'Upland Chorus Frogs',
         category: 'Arabia Mountain',
         image: {
-          file: 'frog.jpeg',
-          info: '',
-          credit: '<a href="https://unsplash.com/photos/O-TM2E-7cn4">Photo by Wayne Robinson</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
+          file: 'chorus-frog.jpg',
+          info: 'This photo was taken in Back Bay National Wildlife Refuge, Virginia, U.S.',
+          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/12030/rec/3">USFWS, NCTC Image Library, public domain</a>'
         },
         sound: {
           file: 'upland chorus frogs - Arabia.mp3',
@@ -1209,9 +1209,9 @@ angular.module('app')
         title: 'Barred Owl, distant',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'barred-owl2.jpg',
-          info: 'This photo was taken in the Chattahoochee River National Recreation Area.',
-          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=BB556233-1DD8-B71C-070BB85E8F28D5B6">NPS, public domain</a>'
+          file: 'barred-owl.jpg',
+          info: 'This photo was taken in South Carolina, U.S.',
+          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/14142/rec/1">Mark Musselman/National Audubon Society, U.S. Fish and Wildlife Service, public domain</a>'
         },
         sound: {
           file: 'Barred Owl, distant - oke.mp3',
@@ -1345,9 +1345,9 @@ angular.module('app')
         title: 'Frog & Barred Owl',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'barred-owl.jpg',
-          info: 'This photo was taken in South Carolina, U.S.',
-          credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/14142/rec/1">Mark Musselman/National Audubon Society, U.S. Fish and Wildlife Service, public domain</a>'
+          file: 'frog.jpeg',
+          info: '',
+          credit: '<a href="https://unsplash.com/photos/O-TM2E-7cn4">Photo by Wayne Robinson</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
         sound: {
           file: 'frog_Barred Owl - oke.mp3',
