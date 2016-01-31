@@ -21,17 +21,17 @@ ion-view.game-play-view {
     height: 44px;
   }
   div.container {
-    //                   nav bar  padding
-    height: calc(100vh - 44px   - 24px);
+    //                   nav bar  padding   status bar
+    height: calc(100vh - 44px   - 24px    - 20px);
   }
   div.audio-photo {
     margin-bottom: 10px;
     width: 100%;
     &.top-landscape {
-      height: calc(100vh - (48vw + 4px + 44px + 30px));
+      height: calc(100vh - (48vw + 4px + 44px + 30px + 20px));
     }
     &.top-portrait {
-      height: calc(28vh - (44px + 38px));
+      height: calc(28vh - (44px + 38px + 20px));
     }
     .audio {
       display: inline-block;

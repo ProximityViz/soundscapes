@@ -18,7 +18,7 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
 
     $localStorage.$default({

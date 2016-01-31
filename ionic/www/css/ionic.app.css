@@ -9764,7 +9764,7 @@ ion-view.explore .button {
     color: #190801; }
 
 ion-view.nav .button {
-  height: calc((100vh - 115px) / 5); }
+  height: calc((100vh - 115px - 20px) / 5); }
 
 span.game-title {
   font-size: 17px; }
@@ -9788,15 +9788,15 @@ ion-view.game-play-view .next {
   height: 44px; }
 
 ion-view.game-play-view div.container {
-  height: calc(100vh - 44px   - 24px); }
+  height: calc(100vh - 44px   - 24px    - 20px); }
 
 ion-view.game-play-view div.audio-photo {
   margin-bottom: 10px;
   width: 100%; }
   ion-view.game-play-view div.audio-photo.top-landscape {
-    height: calc(100vh - (48vw + 4px + 44px + 30px)); }
+    height: calc(100vh - (48vw + 4px + 44px + 30px + 20px)); }
   ion-view.game-play-view div.audio-photo.top-portrait {
-    height: calc(28vh - (44px + 38px)); }
+    height: calc(28vh - (44px + 38px + 20px)); }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;
