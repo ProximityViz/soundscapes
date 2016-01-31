@@ -5,6 +5,7 @@
   <ion-nav-buttons side="right">
     <button class="button next-button icon-right ion-arrow-right-a" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next&nbsp;</button>
   </ion-nav-buttons>
+  <div class="progress-bar" ng-style="{'width':gamePlay.completionPercentage+'%'}"></div>
   <ion-content class="padding" scroll="false">
     <div class="audio-photo" ng-class="orientation === 'landscape' ? 'top-landscape' : 'top-portrait'" ng-hide="gamePlay.quizComplete">
       <div class="audio">

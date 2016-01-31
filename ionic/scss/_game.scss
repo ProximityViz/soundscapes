@@ -30,6 +30,14 @@ button.button.next-button {
   width: 100px;
 }
 ion-view.game-play-view {
+  .progress-bar {
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    top: 44px;
+    background-color: green;
+    z-index: 19;
+  }
   div.container {
     //                   nav bar  padding   status bar
     height: calc(100vh - 44px   - 24px    - 20px);

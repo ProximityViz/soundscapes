@@ -9815,6 +9815,14 @@ button.button.next-button {
   border: 1px solid #fff;
   width: 100px; }
 
+ion-view.game-play-view .progress-bar {
+  height: 1px;
+  position: absolute;
+  left: 0px;
+  top: 44px;
+  background-color: green;
+  z-index: 19; }
+
 ion-view.game-play-view div.container {
   height: calc(100vh - 44px   - 24px    - 20px); }
 
