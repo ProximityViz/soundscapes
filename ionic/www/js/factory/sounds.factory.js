@@ -25,7 +25,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_KILLDEER.jpg',
+          file: 'Spectro_KILLDEER.png',
           credit: 'NPS'
         }
       },{
@@ -41,7 +41,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Osprey_GRTE_2005_5_29.jpg',
+          file: 'Spectro_Osprey_GRTE_2005_5_29.png',
           credit: 'NPS'
         }
       },{
@@ -57,7 +57,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Spotted_Bat_YOSE.jpg',
+          file: 'Spectro_Spotted_Bat_YOSE.png',
           credit: 'NPS'
         }
       },{
@@ -73,7 +73,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Bison_YELL.jpg',
+          file: 'Spectro_Bison_YELL.png',
           credit: 'NPS'
         }
       },{
@@ -89,7 +89,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Crickets_MOJA.jpg',
+          file: 'Spectro_Crickets_MOJA.png',
           credit: 'NPS'
         }
       },{
@@ -105,7 +105,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Common_Raven_GRTE.jpg',
+          file: 'Spectro_Common_Raven_GRTE.png',
           credit: 'NPS'
         }
       },{
@@ -121,7 +121,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_EVER002_greentreefrog.jpg',
+          file: 'Spectro_EVER002_greentreefrog.png',
           credit: 'NPS'
         }
       },{
@@ -137,7 +137,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Spotted_Owl_YOSE_7_14_2006.jpg',
+          file: 'Spectro_Spotted_Owl_YOSE_7_14_2006.png',
           credit: 'NPS'
         }
       },{
@@ -153,7 +153,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Ocean_Olympic_NP.jpg',
+          file: 'Spectro_Ocean_Olympic_NP.png',
           credit: 'NPS'
         }
       },{
@@ -169,7 +169,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Humpback_GLBA.jpg',
+          file: 'Spectro_Humpback_GLBA.png',
           credit: 'NPS'
         }
       },{
@@ -186,7 +186,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Thunder_Sound_Pic.jpg',
+          file: 'Thunder_Sound_Pic.png',
           credit: 'NPS'
         }
       },{
@@ -202,7 +202,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Hummingbird_GRTE_2005_6_9.jpg',
+          file: 'Spectro_Hummingbird_GRTE_2005_6_9.png',
           credit: 'NPS'
         }
       },{
@@ -218,7 +218,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_CouchsSpadefootToad.jpg',
+          file: 'Spectro_CouchsSpadefootToad.png',
           credit: 'NPS'
         }
       },{
@@ -234,7 +234,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Car_Alarm_KEFJ_Sound.jpg',
+          file: 'Car_Alarm_KEFJ_Sound.png',
           credit: 'NPS'
         }
       },{
@@ -250,7 +250,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Siren_GRTE_2004_6_7.jpg',
+          file: 'Spectro_Siren_GRTE_2004_6_7.png',
           credit: 'NPS'
         }
       },{
@@ -266,7 +266,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Alligator_EVER.jpg',
+          file: 'Spectro_Alligator_EVER.png',
           credit: 'NPS'
         }
       },{
@@ -282,7 +282,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Jet_YOSE.jpg',
+          file: 'Spectro_Jet_YOSE.png',
           credit: 'NPS'
         }
       },{
@@ -298,7 +298,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_cannon.jpg',
+          file: 'Spectro_cannon.png',
           credit: 'NPS'
         }
       },{
@@ -314,7 +314,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Motorcycle_MORA_9_4_2006.jpg',
+          file: 'Spectro_Motorcycle_MORA_9_4_2006.png',
           credit: 'NPS'
         }
       },{
@@ -330,7 +330,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Propeller_GOGA.jpg',
+          file: 'Spectro_Propeller_GOGA.png',
           credit: 'NPS'
         }
       },{
@@ -346,7 +346,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Reveille_FOLS.jpg',
+          file: 'Spectro_Reveille_FOLS.png',
           credit: 'NPS'
         }
       },{
@@ -362,7 +362,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Bear_with_cubs_DENA.jpg',
+          file: 'Spectro_Bear_with_cubs_DENA.png',
           credit: 'NPS'
         }
       },{
@@ -378,7 +378,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Northern_Flicker_YOSE_7_21_2006.jpg',
+          file: 'Spectro_Northern_Flicker_YOSE_7_21_2006.png',
           credit: 'NPS'
         }
       },{
@@ -394,7 +394,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_EVER002_PigFrog.jpg',
+          file: 'Spectro_EVER002_PigFrog.png',
           credit: 'NPS'
         }
       },{
@@ -410,7 +410,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Uau_HawaiianPetrel_HALE.jpg',
+          file: 'Uau_HawaiianPetrel_HALE.png',
           credit: 'NPS'
         }
       },{
@@ -426,7 +426,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_CommonPoorwill_GRBA.jpg',
+          file: 'Spectro_CommonPoorwill_GRBA.png',
           credit: 'NPS'
         }
       },{
@@ -443,7 +443,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Avalanche_DENA.jpg',
+          file: 'Spectro_Avalanche_DENA.png',
           credit: 'NPS'
         }
       },{
@@ -459,7 +459,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'BighornSheep_RammingHeads_Specto.jpg',
+          file: 'BighornSheep_RammingHeads_Specto.png',
           credit: 'NPS'
         }
       },{
@@ -475,7 +475,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Ground_squirrel_DENA.jpg',
+          file: 'Spectro_Ground_squirrel_DENA.png',
           credit: 'NPS'
         }
       },{
@@ -491,7 +491,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Jamboree_MIMA_10_03_06.jpg',
+          file: 'Spectro_Jamboree_MIMA_10_03_06.png',
           credit: 'NPS'
         }
       },{
@@ -507,7 +507,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_WesternGull_GOGA_02_01_2008.jpg',
+          file: 'Spectro_WesternGull_GOGA_02_01_2008.png',
           credit: 'NPS'
         }
       },{
@@ -523,7 +523,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Grashopper_YOSE.jpg',
+          file: 'Spectro_Grashopper_YOSE.png',
           credit: 'NPS'
         }
       },{
@@ -539,7 +539,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Steller_Jay.jpg',
+          file: 'Spectro_Steller_Jay.png',
           credit: 'NPS'
         }
       },{
@@ -555,7 +555,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_AlderFlycatcher_YukonRiver.jpg',
+          file: 'Spectro_AlderFlycatcher_YukonRiver.png',
           credit: 'NPS'
         }
       },{
@@ -571,7 +571,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Omaha_Indian_Contest_Song_LOC.jpg',
+          file: 'Spectro_Omaha_Indian_Contest_Song_LOC.png',
           credit: 'NPS'
         }
       },{
@@ -587,7 +587,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Snowmobile.jpg',
+          file: 'Spectro_Snowmobile.png',
           credit: 'NPS'
         }
       },{
@@ -603,7 +603,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Chainsaw_SEKI.jpg',
+          file: 'Spectro_Chainsaw_SEKI.png',
           credit: 'NPS'
         }
       },{
@@ -619,7 +619,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Rain_DEPO_9_26_2005.jpg',
+          file: 'Spectro_Rain_DEPO_9_26_2005.png',
           credit: 'NPS'
         }
       },{
@@ -635,7 +635,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Sandhill_Cranes_DENA_2004_9_14.jpg',
+          file: 'Spectro_Sandhill_Cranes_DENA_2004_9_14.png',
           credit: 'NPS'
         }
       },{
@@ -651,7 +651,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Yellow_Rumped_Warbler_GRTE_2005_6_30.jpg',
+          file: 'Spectro_Yellow_Rumped_Warbler_GRTE_2005_6_30.png',
           credit: 'NPS'
         }
       },{
@@ -667,7 +667,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_battlesounds.jpg',
+          file: 'Spectro_battlesounds.png',
           credit: 'NPS'
         }
       },{
@@ -683,7 +683,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Chickens_MIMA.jpg',
+          file: 'Spectro_Chickens_MIMA.png',
           credit: 'NPS'
         }
       },{
@@ -699,7 +699,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Coyotes_MOJA.jpg',
+          file: 'Spectro_Coyotes_MOJA.png',
           credit: 'NPS'
         }
       },{
@@ -715,7 +715,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Omaha_Indian_Buffalo_Dance_LOC.jpg',
+          file: 'Spectro_Omaha_Indian_Buffalo_Dance_LOC.png',
           credit: 'NPS'
         }
       },{
@@ -731,7 +731,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_White_crowned_Sparrow_DENA.jpg',
+          file: 'Spectro_White_crowned_Sparrow_DENA.png',
           credit: 'NPS'
         }
       },{
@@ -747,7 +747,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_AmericanRobin_YELL_2005_4_19.jpg',
+          file: 'Spectro_AmericanRobin_YELL_2005_4_19.png',
           credit: 'NPS'
         }
       },{
@@ -763,7 +763,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Wolf_DENA_7_25_2006.jpg',
+          file: 'Spectro_Wolf_DENA_7_25_2006.png',
           credit: 'NPS'
         }
       },{
@@ -779,7 +779,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_MusketFire_MIMA.jpg',
+          file: 'Spectro_MusketFire_MIMA.png',
           credit: 'NPS'
         }
       },{
@@ -795,7 +795,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Ptarmagin_DENA_5_19_2006.jpg',
+          file: 'Spectro_Ptarmagin_DENA_5_19_2006.png',
           credit: 'NPS'
         }
       },{
@@ -811,7 +811,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Bee_YOSE.jpg',
+          file: 'Spectro_Bee_YOSE.png',
           credit: 'NPS'
         }
       },{
@@ -827,7 +827,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_CanadaGoose.jpg',
+          file: 'Spectro_CanadaGoose.png',
           credit: 'NPS'
         }
       },{
@@ -843,7 +843,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Anhinga_EVER.jpg',
+          file: 'Spectro_Anhinga_EVER.png',
           credit: 'NPS'
         }
       },{
@@ -859,7 +859,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Boat_NOCA.jpg',
+          file: 'Spectro_Boat_NOCA.png',
           credit: 'NPS'
         }
       },{
@@ -875,7 +875,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Elk_Bugling_GRSA.jpg',
+          file: 'Spectro_Elk_Bugling_GRSA.png',
           credit: 'NPS'
         }
       },{
@@ -907,7 +907,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_BaldEagle_YELL.jpg',
+          file: 'Spectro_BaldEagle_YELL.png',
           credit: 'NPS'
         }
       },{
@@ -923,14 +923,14 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Clarks_Nutcracker_YOSE.jpg',
+          file: 'Spectro_Clarks_Nutcracker_YOSE.png',
           credit: 'NPS'
         }
       },{
         title: 'Hermit Thrush',
         category: 'Birds',
         image: {
-          file: 'Hermit_Thrush_credit_FWS_lg.jpg',
+          file: 'Hermit_Thrush_credit_FWS_lg.png',
           credit: 'USFWS/Lee Karney'
         },
         sound: {
@@ -939,7 +939,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Hermit_Thrush_YOSE_7_17_2006.jpg',
+          file: 'Spectro_Hermit_Thrush_YOSE_7_17_2006.png',
           credit: 'NPS'
         }
       },{
@@ -955,7 +955,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Red_breasted_Nuthatch_YOSE_7_8_2006.jpg',
+          file: 'Spectro_Red_breasted_Nuthatch_YOSE_7_8_2006.png',
           credit: 'NPS'
         }
       },{
@@ -971,7 +971,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Harmonica_YOSE_6_24_2006.jpg',
+          file: 'Spectro_Harmonica_YOSE_6_24_2006.png',
           credit: 'NPS'
         }
       },{
@@ -987,7 +987,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'menor_ferry.jpg',
+          file: 'menor_ferry.png',
           credit: 'NPS'
         }
       },{
@@ -1003,7 +1003,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Traditional_Native_American_Music.jpg',
+          file: 'Spectro_Traditional_Native_American_Music.png',
           credit: 'NPS'
         }
       },{
@@ -1019,7 +1019,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Sensation_Jazz.jpg',
+          file: 'Spectro_Sensation_Jazz.png',
           credit: 'NPS'
         }
       },{
@@ -1035,7 +1035,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_GulfToadFish_EVER.jpg',
+          file: 'Spectro_GulfToadFish_EVER.png',
           credit: 'NPS'
         }
       },{
@@ -1067,7 +1067,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Helicopter_YOSE_8_6_2005.jpg',
+          file: 'Spectro_Helicopter_YOSE_8_6_2005.png',
           credit: 'NPS'
         }
       },{
@@ -1083,7 +1083,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_RotarySnowPlow.jpg',
+          file: 'Spectro_RotarySnowPlow.png',
           credit: 'NPS'
         }
       },{
@@ -1099,7 +1099,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Stream_MUWO.jpg',
+          file: 'Spectro_Stream_MUWO.png',
           credit: 'NPS'
         }
       },{
@@ -1115,7 +1115,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'CoyoteChase_GRSA.jpg',
+          file: 'CoyoteChase_GRSA.png',
           credit: 'NPS'
         }
       },{
@@ -1131,7 +1131,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Killer_Whale_GLBA.jpg',
+          file: 'Spectro_Killer_Whale_GLBA.png',
           credit: 'NPS'
         }
       },{
@@ -1147,7 +1147,7 @@ angular.module('app')
           credit: 'NPS'
         },
         spectrogram: {
-          file: 'Spectro_Squirrel_YELL.jpg',
+          file: 'Spectro_Squirrel_YELL.png',
           credit: 'NPS'
         }
       }
