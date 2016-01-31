@@ -1,6 +1,6 @@
 angular.module('app.controllers')
-.controller('ExploreCtrl', ['SoundsFactory', '$stateParams', '$scope', '$ionicModal', 
-										function(SoundsFactory,   $stateParams,   $scope,   $ionicModal) {
+.controller('ExploreCtrl', ['SoundsFactory', '$stateParams', '$scope', '$ionicModal', '$ionicScrollDelegate', '$timeout', 
+										function(SoundsFactory,   $stateParams,   $scope,   $ionicModal,   $ionicScrollDelegate,   $timeout) {
 	console.log('ExploreCtrl');
 
 	this.packName = "NPS";
@@ -12,6 +12,7 @@ angular.module('app.controllers')
 
 	this.expandCollapse = function(index) {
 		this.expanded[index] = !this.expanded[index];
+		$timeout(function () { $ionicScrollDelegate.resize(); }, 150); // resize scroll after ng-hide/ng-show
 	}
 
 	$ionicModal.fromTemplateUrl('templates/photo-modal.html', {
