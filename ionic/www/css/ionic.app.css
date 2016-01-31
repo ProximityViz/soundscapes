@@ -9744,6 +9744,9 @@ ion-header-bar.bar .title {
 .hidden {
   display: none; }
 
+a {
+  color: #11c1f3; }
+
 /* Suggested by ionic developers to make modal full height on tablets*/
 @media (min-width: 680px) {
   .modal {
@@ -9793,6 +9796,9 @@ span.game-title {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; }
+  .photo-modal ion-content.info {
+    font-size: 3vw;
+    line-height: 4vw; }
 
 @keyframes time {
   from {

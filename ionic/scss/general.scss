@@ -24,6 +24,10 @@ ion-header-bar.bar .title {
   display: none;
 }
 
+a {
+  color: $calm;
+}
+
 /* Suggested by ionic developers to make modal full height on tablets*/
 @media (min-width: 680px) {
   .modal {

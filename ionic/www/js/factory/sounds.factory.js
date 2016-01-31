@@ -1175,7 +1175,7 @@ angular.module('app')
         title: 'Lapping Waves, Sunny Day',
         category: 'Cumberland Island',
         image: {
-          file: 'lapping waves.jpeg',
+          file: 'lapping-waves.jpeg',
           info: '<a href="https://unsplash.com/photos/yXAtOOBwFNY">This photo was taken in Karwia, Władysławowo, Poland</a>. ',
           credit: 'Kamil Manka, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
@@ -1192,7 +1192,7 @@ angular.module('app')
         title: 'Breaking Wave',
         category: 'Cumberland Island',
         image: {
-          file: 'breaking wave.jpeg',
+          file: 'breaking-wave.jpeg',
           info: '',
           credit: '<a href="https://unsplash.com/photos/LiCruQYCdnc">Photo by Austin Schmid</a>, License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
@@ -1209,7 +1209,7 @@ angular.module('app')
         title: 'Barred Owl, distant',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'barred owl.jpeg',
+          file: 'barred-owl.jpeg',
           info: '',
           credit: '<a href="https://unsplash.com/photos/ea-1v3Mp6o8">Photo by photostockeditor</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
@@ -1226,7 +1226,7 @@ angular.module('app')
         title: 'Black Crowned Night Heron',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'black crowned night heron.jpg',
+          file: 'black-crowned-night-heron.jpg',
           info: 'This photo was taken on Alcatraz Island',
           credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=ECC797FE-155D-4519-3EC65BBF661176B2">NPS, public domain</a>'
         },
@@ -1262,7 +1262,7 @@ angular.module('app')
         image: {
           file: 'plop.jpg',
           info: 'This photo was taken in Acadia National Park.',
-          credit: '<a href="http://www.nps.gov/media/photo/view.htm?id=F485BBE8-155D-451F-67354EEC249DC222">NPS, public domain</a>'
+          credit: '<a href="plop.jpg">NPS, public domain</a>'
         },
         sound: {
           file: 'Barred Owl -frog plop - oke.mp3',
@@ -1277,7 +1277,7 @@ angular.module('app')
         title: 'Sand Sizzle',
         category: 'Cumberland Island',
         image: {
-          file: 'sand sizzle.jpg',
+          file: 'sand-sizzle.jpg',
           info: '',
           credit: '<a href="https://unsplash.com/photos/vigsqYux_-8">Photo by Sarah Bürvenich</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
@@ -1311,7 +1311,7 @@ angular.module('app')
         title: 'Great Horned Owl with traffic, birds, roosters',
         category: 'Arabia Mountain',
         image: {
-          file: 'placeholder.png',
+          file: 'great-horned-owl.jpg',
           info: '',
           credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/12826/rec/1">USFWS, public domain</a>'
         },
@@ -1328,7 +1328,7 @@ angular.module('app')
         title: 'Plane - High to Low',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'placeholder.png',
+          file: 'plane2.jpeg',
           info: '',
           credit: '<a href="https://unsplash.com/photos/oLU4_n6c2CY">Photo by Daria Sukhorukova</a>, license: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>'
         },
@@ -1345,7 +1345,7 @@ angular.module('app')
         title: 'Frog & Barred Owl',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'barred owl.jpg',
+          file: 'barred-owl.jpg',
           info: 'This photo was taken in South Carolina, U.S.',
           credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/14142/rec/1">Mark Musselman/National Audubon Society, U.S. Fish and Wildlife Service, public domain</a>'
         },
@@ -1379,7 +1379,7 @@ angular.module('app')
         title: 'Sandhill Crane with Takeoff',
         category: 'Okefenokee Swamp',
         image: {
-          file: 'sandhill crane.jpg',
+          file: 'sandhill-crane.jpg',
           info: '',
           credit: '<a href="http://digitalmedia.fws.gov/cdm/singleitem/collection/natdiglib/id/11258/rec/33">USFWS, public domain</a>'
         },

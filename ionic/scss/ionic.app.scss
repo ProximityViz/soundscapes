@@ -6,13 +6,13 @@ For example, you might change some of the default colors:
 
 */
 $light:                           #fff !default;
-$stable:                          #f8f8f8 !default;
-$positive:                        #190801 !default;
-$calm:                            #11c1f3 !default;
-$balanced:                        #33cd5f !default;
-$energized:                       #a63608 !default;
-$assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
+$stable:                          #f8f8f8 !default; // almost white
+$positive:                        #190801 !default; // dark brown
+$calm:                            #11c1f3 !default; // bright blue
+$balanced:                        #33cd5f !default; // green
+$energized:                       #a63608 !default; // medium brown
+$assertive:                       #ef473a !default; // red
+$royal:                           #886aea !default; // purple
 $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css

@@ -11,6 +11,10 @@ span.game-title {
     background-repeat: no-repeat;
     background-position: center center; 
   }
+  ion-content.info {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
 }
 @keyframes time {
   from {left: 0;}
