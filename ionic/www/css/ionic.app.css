@@ -9789,7 +9789,7 @@ span.game-title {
   font-size: 17px; }
 
 .photo-modal {
-  height: calc(100% - 44px); }
+  height: 100%; }
   .photo-modal .photo {
     height: 80%;
     width: 100%;
@@ -9819,7 +9819,7 @@ ion-view.game-play-view .progress-bar {
   height: 1px;
   position: absolute;
   left: 0px;
-  top: 44px;
+  top: 64px;
   background-color: green;
   z-index: 19; }
 

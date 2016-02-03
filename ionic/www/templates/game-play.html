@@ -17,7 +17,7 @@
         <div ng-bind-html="gamePlay.quiz.sound.info"></div>
         <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
       </div>
-      <div class="photo" ng-style="{'background-image':'url(/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
+      <div class="photo" ng-style="{'background-image':'url('+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
       </div>
     </div>
     <div class="container" ng-class="{hidden: gamePlay.quizComplete}">

@@ -3,7 +3,7 @@ span.game-title {
 }
 
 .photo-modal {
-  height: calc(100% - 44px);
+  height: 100%;
   .photo {
     height: 80%;
     width: 100%;
@@ -34,7 +34,7 @@ ion-view.game-play-view {
     height: 1px;
     position: absolute;
     left: 0px;
-    top: 44px;
+    top: 64px;
     background-color: green;
     z-index: 19;
   }
