@@ -1,0 +1,36 @@
+.learn {
+  .bold {
+    font-weight: bold;
+  }
+  .emph {
+    font-style: italic;
+  }
+  .card {
+    .header {
+      font-size: 3vw;
+      height: calc(3vw + 16px);
+      color: $positive;
+    }
+    .item-text-wrap {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    p {
+      font-size: 2vw;
+      margin-top: 2vw;
+      margin-bottom: 2vw;
+    }
+    ol {
+      list-style: decimal;
+      margin-left: 2em;
+    }
+    .image-column {
+      width: 100%;
+    }
+  }
+  .footnote {
+    a {
+      color: $positive;
+    }
+  }
+}

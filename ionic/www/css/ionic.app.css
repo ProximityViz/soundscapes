@@ -9785,6 +9785,36 @@ ion-view.explore .button {
 ion-view.nav .button {
   height: calc((100vh - 115px - 20px) / 5); }
 
+.learn .bold {
+  font-weight: bold; }
+
+.learn .emph {
+  font-style: italic; }
+
+.learn .card .header {
+  font-size: 3vw;
+  height: calc(3vw + 16px);
+  color: #190801; }
+
+.learn .card .item-text-wrap {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.learn .card p {
+  font-size: 2vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw; }
+
+.learn .card ol {
+  list-style: decimal;
+  margin-left: 2em; }
+
+.learn .card .image-column {
+  width: 100%; }
+
+.learn .footnote a {
+  color: #190801; }
+
 span.game-title {
   font-size: 17px; }
 
