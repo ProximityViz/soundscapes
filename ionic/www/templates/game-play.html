@@ -10,12 +10,11 @@
     <div class="audio-photo" ng-class="orientation === 'landscape' ? 'top-landscape' : 'top-portrait'" ng-hide="gamePlay.quizComplete">
       <div class="audio">
         <div class="quiz-title" ng-bind="gamePlay.quiz.title"></div>
-        <audio id="audio" controls class="inline">
-          <source id="source" ng-src="{{gamePlay.audio}}" ng-click="gamePlay.audioTapped()">
-          Your browser does not support the audio element.
-        </audio>
-        <div ng-bind-html="gamePlay.quiz.sound.info"></div>
-        <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
+        <button ng-click="gamePlay.audioTapped()" class="audio-button" ng-class="gamePlay.audioIcon"></button>
+        <div class="sound-info">
+          <div ng-bind-html="gamePlay.quiz.sound.info"></div>
+          <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
+        </div>
       </div>
       <div class="photo" ng-style="{'background-image':'url('+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
       </div>

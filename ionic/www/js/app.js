@@ -7,7 +7,8 @@ angular.module('app',
   [
     'ionic', 
     'app.controllers', 
-    'ngStorage'
+    'ngStorage',
+    'ngAudio'
   ])
 
 .run(function($ionicPlatform, $localStorage) {

@@ -9872,6 +9872,12 @@ ion-view.game-play-view div.audio-photo {
     ion-view.game-play-view div.audio-photo.top-landscape .photo {
       width: calc((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2);
       max-width: calc(50% - 10px); }
+    ion-view.game-play-view div.audio-photo.top-landscape .audio-button {
+      width: 8vw;
+      height: 8vw;
+      font-size: 3.5vw; }
+    ion-view.game-play-view div.audio-photo.top-landscape .sound-info {
+      display: inline-block; }
   ion-view.game-play-view div.audio-photo.top-portrait {
     height: calc(28vh - (44px + 38px + 20px)); }
     ion-view.game-play-view div.audio-photo.top-portrait .audio {
@@ -9885,6 +9891,13 @@ ion-view.game-play-view div.audio-photo {
     ion-view.game-play-view div.audio-photo.top-portrait .photo {
       width: calc((28vh - (44px + 38px + 20px))*3/2);
       max-width: calc(50% - 10px); }
+    ion-view.game-play-view div.audio-photo.top-portrait .audio-button {
+      width: 8vh;
+      height: 8vh;
+      font-size: 3.5vh; }
+    ion-view.game-play-view div.audio-photo.top-portrait .sound-info {
+      display: inline-block;
+      width: calc(100vw - 36px - ((28vh - (44px + 38px + 20px))*3/2) - 9vh); }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;

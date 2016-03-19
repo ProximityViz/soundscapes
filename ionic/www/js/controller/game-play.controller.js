@@ -1,7 +1,9 @@
 angular.module('app.controllers')
-.controller('GamePlayCtrl', ['$scope', '$localStorage', '$ionicModal', '$ionicConfig', 'SoundsFactory', '$stateParams', 
-					 					 function($scope,   $localStorage,   $ionicModal,   $ionicConfig,   SoundsFactory,   $stateParams) {
+.controller('GamePlayCtrl', ['$scope', '$localStorage', '$ionicModal', '$ionicConfig', 'SoundsFactory', '$stateParams', 'ngAudio', '$interval',
+					 					 function($scope,   $localStorage,   $ionicModal,   $ionicConfig,   SoundsFactory,   $stateParams,   ngAudio,   $interval) {
 	console.log('GamePlayCtrl');
+
+	var vm = this;
 
 	$ionicConfig.backButton.previousTitleText(false);
 
@@ -30,7 +32,7 @@ angular.module('app.controllers')
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
 	this.completionPercentage = (this.number - 1) * 100 / this.quiz.packSize;
-	this.audio = this.quiz.sound.file;
+	this.audio = ngAudio.load(this.quiz.sound.file);
 
 	this.attempted = [false, false, false, false];
 	this.complete = false;
@@ -48,6 +50,7 @@ angular.module('app.controllers')
 	};
 
 	this.advance = function() {
+		this.audio.stop();
 		if (this.number == this.quiz.packSize) {
 			this.complete = false;
 			this.quizComplete = true;
@@ -59,9 +62,7 @@ angular.module('app.controllers')
 			this.number = parseInt(this.id) + 1;
 			this.attempted = [false, false, false, false];
 			this.complete = false;
-			this.audio = this.quiz.sound.file;
-			source.src = this.audio;
-			audio.load();
+			this.audio = ngAudio.load(this.quiz.sound.file);
 			$localStorage.gameProgress[$stateParams.pack] = this.id;
 		}
 	};
@@ -92,29 +93,39 @@ angular.module('app.controllers')
 		$scope.spectrogramModal.show();
 	}
 
+	vm.audioIcon = 'ion-play';
+	function toggleAudioIcon() {
+		vm.audioIcon = vm.audioIcon === 'ion-play' ? 'ion-stop' : 'ion-play';
+	}
+
+	// monitor ngAudio every n milliseconds to see if the audio has ended
+	var interval = 300;
+	function checkAudio() {
+		if (typeof(vm.audio) !== 'undefined' && !vm.audio.paused && vm.audio.remaining <= interval / 1000) {
+			toggleAudioIcon();
+		}
+	}
+	$interval(checkAudio, interval);
+
+	var elements = document.getElementsByClassName("time-bar-not-animated");
+
 	// when the audio play button is pressed,
 	// start animation
 	// when the pause button is pressed,
 	// pause animation
 	this.audioTapped = function() {
-		console.log("audio");
+		toggleAudioIcon();
+		if (vm.audioIcon === 'ion-stop') {
+			if (!this.audio.paused) {
+				this.audio.stop();
+				angular.element(elements).removeClass("time-bar");
+			}
+			this.audio.play();
+			angular.element(elements).addClass("time-bar");
+		} else {
+			this.audio.stop();
+			angular.element(elements).removeClass("time-bar");
+		}
 	}
-	var player = document.getElementById("audio");
-	var elements = document.getElementsByClassName("time-bar-not-animated");
-	player.onplay = function() {
-		console.log("audio playing");
-		// add time-bar class
-		angular.element(elements).addClass("time-bar");
-	};
-	player.onpause = function() {
-		console.log("audio paused");
-		// remove time-bar class (for now)
-		angular.element(elements).removeClass("time-bar");
-	};
-	player.onended = function() {
-		console.log("audio ended");
-		// remove time-bar class
-		angular.element(elements).removeClass("time-bar");
-	};
 
 }]);

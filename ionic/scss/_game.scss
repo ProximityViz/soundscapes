@@ -61,6 +61,15 @@ ion-view.game-play-view {
         width: calc((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2);
         max-width: calc(50% - 10px);
       }
+      .audio-button {
+        width: 8vw;
+        height: 8vw;
+        font-size: 3.5vw;
+      }
+      .sound-info {
+        display: inline-block;
+        calc(100vw - 36px - ((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2) - 9vw));
+      }
     }
     &.top-portrait {
       height: calc(28vh - (44px + 38px + 20px));
@@ -77,6 +86,15 @@ ion-view.game-play-view {
       .photo {
         width: calc((28vh - (44px + 38px + 20px))*3/2);
         max-width: calc(50% - 10px);
+      }
+      .audio-button {
+        width: 8vh;
+        height: 8vh;
+        font-size: 3.5vh;
+      }
+      .sound-info {
+        display: inline-block;
+        width: calc(100vw - 36px - ((28vh - (44px + 38px + 20px))*3/2) - 9vh);
       }
     }
     .audio {
