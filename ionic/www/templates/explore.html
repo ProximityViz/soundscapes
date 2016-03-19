@@ -1,12 +1,12 @@
-<ion-view view-title="Explore">
+<ion-view view-title="Explore" class="explore">
   <ion-nav-buttons side="left">
   </ion-nav-buttons>
   <ion-content class="padding">
     <button class="button button-positive button-block" ng-repeat="pack in packs.packs" ui-sref="explore-pack({pack: pack.shortTitle})">
       {{pack.title}} pack
     </button>
-    <button class="button button-positive button-block">
+<!--     <button class="button button-positive button-block">
       Get more packs
-    </button>
+    </button> -->
   </ion-content>
 </ion-view>

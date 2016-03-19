@@ -29,7 +29,7 @@ angular.module('app.controllers')
 	this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 	this.packName = this.quiz.packTitle;
 	this.number = parseInt(this.id) + 1;
-	this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
+	this.completionPercentage = (this.number - 1) * 100 / this.quiz.packSize;
 	this.audio = this.quiz.sound.file;
 
 	this.attempted = [false, false, false, false];
@@ -40,6 +40,7 @@ angular.module('app.controllers')
 			if (this.quiz.correctSpectrogramIndex === choice) {
 				this.complete = true;
 				this.attempted[choice] = "correct";
+				this.completionPercentage = this.number * 100 / this.quiz.packSize;
 			} else {
 				this.attempted[choice] = "incorrect";
 			}
@@ -56,7 +57,6 @@ angular.module('app.controllers')
 			this.id++;
 			this.quiz = SoundsFactory.getQuiz($stateParams.pack, this.id);
 			this.number = parseInt(this.id) + 1;
-			this.title = this.packName + ' Pack: Sound ' + this.number + ' of ' + this.quiz.packSize;
 			this.attempted = [false, false, false, false];
 			this.complete = false;
 			this.audio = this.quiz.sound.file;

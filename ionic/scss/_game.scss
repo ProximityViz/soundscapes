@@ -3,7 +3,7 @@ span.game-title {
 }
 
 .photo-modal {
-  height: calc(100% - 44px);
+  height: 100%;
   .photo {
     height: 80%;
     width: 100%;
@@ -11,47 +11,83 @@ span.game-title {
     background-repeat: no-repeat;
     background-position: center center; 
   }
+  ion-content.info {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
 }
 @keyframes time {
   from {left: 0;}
   to {left: calc(100% - 1px);} // calc(100% - 3px)
 }
+button.button.next-button {
+  font-size: 20px;
+  line-height: 30px;
+  background-color: green;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  width: 100px;
+}
 ion-view.game-play-view {
-  .next {
-    height: 44px;
+  .progress-bar {
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    top: 64px;
+    background-color: green;
+    z-index: 19;
   }
   div.container {
-    //                   nav bar  padding
-    height: calc(100vh - 44px   - 24px);
+    //                   nav bar  padding   status bar
+    height: calc(100vh - 44px   - 24px    - 20px);
   }
   div.audio-photo {
     margin-bottom: 10px;
     width: 100%;
     &.top-landscape {
-      height: calc(100vh - (48vw + 4px + 44px + 30px));
+      height: calc(100vh - (48vw + 4px + 44px + 30px + 20px));
       .audio {
         font-size: 2.5vh;
         line-height: 3.5vh;
+        width: calc(100vw - 36px - ((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2));
+      }
+      .quiz-title {
+        font-size: 4vh;
+        line-height: 4vh;
+        margin-bottom: 2vh;
+      }
+      .photo {
+        width: calc((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2);
+        max-width: calc(50% - 10px);
       }
     }
     &.top-portrait {
-      height: calc(28vh - (44px + 38px));
+      height: calc(28vh - (44px + 38px + 20px));
       .audio {
         font-size: 2vh;
+        line-height: 2.5vh;
+        width: calc(100vw - 36px - ((28vh - (44px + 38px + 20px))*3/2));
+      }
+      .quiz-title {
+        font-size: 3vh;
         line-height: 3vh;
+        margin-bottom: 1vh;
+      }
+      .photo {
+        width: calc((28vh - (44px + 38px + 20px))*3/2);
+        max-width: calc(50% - 10px);
       }
     }
     .audio {
       display: inline-block;
       min-width: 300px;
       margin-right: 10px;
-      width: calc(50% - 10px);
+      // width: calc(50% - 10px);
       vertical-align: top;
     }
     .photo {
       display: inline-block;
-      width: calc(100% - 20px - 300px);
-      max-width: calc(50% - 10px);
       height: 100%;
       background-size: contain;
       background-repeat: no-repeat;
@@ -91,6 +127,9 @@ ion-view.game-play-view {
       right: 1vw;
       width: 8vw;
       height: 8vw;
+      &:before {
+        font-size: 30px !important;
+      }
     }
     .select-button {
       bottom: 10vw;

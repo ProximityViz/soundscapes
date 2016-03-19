@@ -1,13 +1,12 @@
 <ion-view view-title="Play" class="game">
   <ion-nav-buttons side="left">
-    <button class="button" ui-sref="app">Home icon</button>
   </ion-nav-buttons>
   <ion-content class="padding">
     <button class="button button-positive button-block" ng-repeat="pack in packs.packs" ui-sref="game-pack({pack: pack.shortTitle, soundId: 0})">
       {{pack.title}} pack
     </button>
-    <button class="button button-positive button-block">
+<!--     <button class="button button-positive button-block">
       Get more packs
-    </button>
+    </button> -->
   </ion-content>
 </ion-view>

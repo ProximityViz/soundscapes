@@ -1,22 +1,23 @@
 <ion-view class="game-play-view">
   <ion-nav-title class="game-title">
-    {{gamePlay.quiz.title}}
+    {{gamePlay.packName}} Pack
   </ion-nav-title>
   <ion-nav-buttons side="right">
-    <button class="button button-positive" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next</button>
+    <button class="button next-button icon-right ion-arrow-right-a" ng-if="gamePlay.complete" ng-click="gamePlay.advance();">Next&nbsp;</button>
   </ion-nav-buttons>
+  <div class="progress-bar" ng-style="{'width':gamePlay.completionPercentage+'%'}"></div>
   <ion-content class="padding" scroll="false">
     <div class="audio-photo" ng-class="orientation === 'landscape' ? 'top-landscape' : 'top-portrait'" ng-hide="gamePlay.quizComplete">
       <div class="audio">
+        <div class="quiz-title" ng-bind="gamePlay.quiz.title"></div>
         <audio id="audio" controls class="inline">
           <source id="source" ng-src="{{gamePlay.audio}}" ng-click="gamePlay.audioTapped()">
           Your browser does not support the audio element.
         </audio>
         <div ng-bind-html="gamePlay.quiz.sound.info"></div>
         <div>Credit: <span ng-bind-html="gamePlay.quiz.sound.credit"></span></div>
-        <div>{{gamePlay.title}}</div>
       </div>
-      <div class="photo" ng-style="{'background-image':'url(/'+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
+      <div class="photo" ng-style="{'background-image':'url('+gamePlay.quiz.image.file+')'}" ng-click="gamePlay.showPhotoModal()">
       </div>
     </div>
     <div class="container" ng-class="{hidden: gamePlay.quizComplete}">
@@ -25,7 +26,7 @@
           <div class="time-bar-not-animated"></div>
         </div>
         <!-- <div ng-style="{'background-image':'url(/'+spectrogram.file+')'}" class="spectrogram" ng-click="gamePlay.choose($index)"></div> -->
-        <img ng-src="{{spectrogram.file}}" class="spectrogram">
+        <img ng-src="{{spectrogram.file}}" class="spectrogram" ng-click="gamePlay.choose($index)">
         <div class="buttons">
           <div class="letter">{{$index + 1 | character}}</div>
           <button class="select-button button icon ion-checkmark" ng-class="{'ion-checkmark-circled': gamePlay.attempted[$index] === 'correct', 'ion-close-circled': gamePlay.attempted[$index] === 'incorrect', attempted: gamePlay.attempted[$index], correct: gamePlay.quiz.correctSpectrogramIndex === $index}" ng-click="gamePlay.choose($index)"></button>

@@ -3,7 +3,12 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
+angular.module('app', 
+  [
+    'ionic', 
+    'app.controllers', 
+    'ngStorage'
+  ])
 
 .run(function($ionicPlatform, $localStorage) {
   $ionicPlatform.ready(function() {
@@ -18,7 +23,7 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      StatusBar.styleLightContent();
     }
 
     $localStorage.$default({
@@ -33,6 +38,11 @@ angular.module('app', ['ionic', 'app.controllers', 'ngStorage'])
     url: '/',
     // abstract: true,
     templateUrl: 'templates/nav.html'
+  })
+  .state('learn', {
+    url: '/learn',
+    templateUrl: 'templates/learn.html',
+    controller: 'LearnCtrl as learn'
   })
   .state('tutorial', {
     url: '/tutorial',

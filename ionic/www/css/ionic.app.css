@@ -9744,8 +9744,28 @@ ion-header-bar.bar .title {
 .hidden {
   display: none; }
 
+a {
+  color: #11c1f3; }
+
+/* Suggested by ionic developers to make modal full height on tablets*/
+@media (min-width: 680px) {
+  .modal {
+    top: 0px !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important; }
+  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) > * {
+    margin-top: 20px; }
+  .platform-ios.platform-cordova .modal-wrapper .modal .bar-header:not(.bar-subheader) {
+    height: 64px; }
+  .platform-ios.platform-cordova .modal-wrapper .modal .has-header,
+  .platform-ios.platform-cordova .modal-wrapper .modal .bar-subheader {
+    top: 64px; } }
+
 ion-view.nav .button,
-ion-view.game .button {
+ion-view.game .button,
+ion-view.explore .button {
   background-color: #fff;
   color: #a63608;
   font-family: 'Belleza';
@@ -9753,27 +9773,62 @@ ion-view.game .button {
   height: 100px;
   font-size: 30px; }
   ion-view.nav .button.activated,
-  ion-view.game .button.activated {
+  ion-view.game .button.activated,
+  ion-view.explore .button.activated {
     background-color: #fff;
     color: #190801; }
   ion-view.nav .button:hover,
-  ion-view.game .button:hover {
+  ion-view.game .button:hover,
+  ion-view.explore .button:hover {
     color: #190801; }
 
 ion-view.nav .button {
-  height: calc((100vh - 115px) / 5); }
+  height: calc((100vh - 115px - 20px) / 5); }
+
+.learn .bold {
+  font-weight: bold; }
+
+.learn .emph {
+  font-style: italic; }
+
+.learn .card .header {
+  font-size: 3vw;
+  height: calc(3vw + 16px);
+  color: #190801; }
+
+.learn .card .item-text-wrap {
+  padding-top: 0px;
+  padding-bottom: 0px; }
+
+.learn .card p {
+  font-size: 2vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw; }
+
+.learn .card ol {
+  list-style: decimal;
+  margin-left: 2em; }
+
+.learn .card .image-column {
+  width: 100%; }
+
+.learn .footnote a {
+  color: #190801; }
 
 span.game-title {
   font-size: 17px; }
 
 .photo-modal {
-  height: calc(100% - 44px); }
+  height: 100%; }
   .photo-modal .photo {
     height: 80%;
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center; }
+  .photo-modal ion-content.info {
+    font-size: 3vw;
+    line-height: 4vw; }
 
 @keyframes time {
   from {
@@ -9781,35 +9836,62 @@ span.game-title {
   to {
     left: calc(100% - 1px); } }
 
-ion-view.game-play-view .next {
-  height: 44px; }
+button.button.next-button {
+  font-size: 20px;
+  line-height: 30px;
+  background-color: green;
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  width: 100px; }
+
+ion-view.game-play-view .progress-bar {
+  height: 1px;
+  position: absolute;
+  left: 0px;
+  top: 64px;
+  background-color: green;
+  z-index: 19; }
 
 ion-view.game-play-view div.container {
-  height: calc(100vh - 44px   - 24px); }
+  height: calc(100vh - 44px   - 24px    - 20px); }
 
 ion-view.game-play-view div.audio-photo {
   margin-bottom: 10px;
   width: 100%; }
   ion-view.game-play-view div.audio-photo.top-landscape {
-    height: calc(100vh - (48vw + 4px + 44px + 30px)); }
+    height: calc(100vh - (48vw + 4px + 44px + 30px + 20px)); }
     ion-view.game-play-view div.audio-photo.top-landscape .audio {
       font-size: 2.5vh;
-      line-height: 3.5vh; }
+      line-height: 3.5vh;
+      width: calc(100vw - 36px - ((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2)); }
+    ion-view.game-play-view div.audio-photo.top-landscape .quiz-title {
+      font-size: 4vh;
+      line-height: 4vh;
+      margin-bottom: 2vh; }
+    ion-view.game-play-view div.audio-photo.top-landscape .photo {
+      width: calc((100vh - (48vw + 4px + 44px + 30px + 20px))*3/2);
+      max-width: calc(50% - 10px); }
   ion-view.game-play-view div.audio-photo.top-portrait {
-    height: calc(28vh - (44px + 38px)); }
+    height: calc(28vh - (44px + 38px + 20px)); }
     ion-view.game-play-view div.audio-photo.top-portrait .audio {
       font-size: 2vh;
-      line-height: 3vh; }
+      line-height: 2.5vh;
+      width: calc(100vw - 36px - ((28vh - (44px + 38px + 20px))*3/2)); }
+    ion-view.game-play-view div.audio-photo.top-portrait .quiz-title {
+      font-size: 3vh;
+      line-height: 3vh;
+      margin-bottom: 1vh; }
+    ion-view.game-play-view div.audio-photo.top-portrait .photo {
+      width: calc((28vh - (44px + 38px + 20px))*3/2);
+      max-width: calc(50% - 10px); }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;
     margin-right: 10px;
-    width: calc(50% - 10px);
     vertical-align: top; }
   ion-view.game-play-view div.audio-photo .photo {
     display: inline-block;
-    width: calc(100% - 20px - 300px);
-    max-width: calc(50% - 10px);
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -9845,6 +9927,9 @@ ion-view.game-play-view div.choice-landscape {
     right: 1vw;
     width: 8vw;
     height: 8vw; }
+    ion-view.game-play-view div.choice-landscape .select-button:before,
+    ion-view.game-play-view div.choice-landscape .zoom-button:before {
+      font-size: 30px !important; }
   ion-view.game-play-view div.choice-landscape .select-button {
     bottom: 10vw; }
   ion-view.game-play-view div.choice-landscape .zoom-button {

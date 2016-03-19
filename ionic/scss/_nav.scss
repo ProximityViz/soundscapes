@@ -1,5 +1,6 @@
 ion-view.nav,
-ion-view.game {
+ion-view.game,
+ion-view.explore {
   .button {
     background-color: $light;
     color: $energized;
@@ -19,6 +20,6 @@ ion-view.game {
 }
 ion-view.nav {
   .button {
-    height: calc((100vh - 115px) / 5);
+    height: calc((100vh - 115px - 20px) / 5);
   }
 }
