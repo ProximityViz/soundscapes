@@ -4,7 +4,7 @@
     <button class="button button-clear button-primary" ng-click="photoModal.hide()">Close</button>
   </ion-header-bar>
   <ion-content class="padding info" scroll="false">
-    <div class="photo" ng-style="{'background-image':'url('+image.file+')'}"></div>
+    <div class="photo" ng-style="{'background-image':'url('+image.file+')'}" ng-click="$event.stopPropagation()"></div>
     <div ng-bind-html="image.info"></div>
     <div ng-if="image.credit">Credit: <span ng-bind-html="image.credit"></span></div>
   </ion-content>
