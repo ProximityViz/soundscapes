@@ -9792,16 +9792,20 @@ ion-view.game-play-view div.audio-photo {
   width: 100%; }
   ion-view.game-play-view div.audio-photo.top-landscape {
     height: calc(100vh - (48vw + 4px + 44px + 30px)); }
+    ion-view.game-play-view div.audio-photo.top-landscape .audio {
+      font-size: 2.5vh;
+      line-height: 3.5vh; }
   ion-view.game-play-view div.audio-photo.top-portrait {
     height: calc(28vh - (44px + 38px)); }
+    ion-view.game-play-view div.audio-photo.top-portrait .audio {
+      font-size: 2vh;
+      line-height: 3vh; }
   ion-view.game-play-view div.audio-photo .audio {
     display: inline-block;
     min-width: 300px;
     margin-right: 10px;
     width: calc(50% - 10px);
-    vertical-align: top;
-    font-size: 2.5vh;
-    line-height: 3.5vh; }
+    vertical-align: top; }
   ion-view.game-play-view div.audio-photo .photo {
     display: inline-block;
     width: calc(100% - 20px - 300px);

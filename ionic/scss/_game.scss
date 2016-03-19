@@ -29,9 +29,17 @@ ion-view.game-play-view {
     width: 100%;
     &.top-landscape {
       height: calc(100vh - (48vw + 4px + 44px + 30px));
+      .audio {
+        font-size: 2.5vh;
+        line-height: 3.5vh;
+      }
     }
     &.top-portrait {
       height: calc(28vh - (44px + 38px));
+      .audio {
+        font-size: 2vh;
+        line-height: 3vh;
+      }
     }
     .audio {
       display: inline-block;
@@ -39,8 +47,6 @@ ion-view.game-play-view {
       margin-right: 10px;
       width: calc(50% - 10px);
       vertical-align: top;
-      font-size: 2.5vh;
-      line-height: 3.5vh;
     }
     .photo {
       display: inline-block;
