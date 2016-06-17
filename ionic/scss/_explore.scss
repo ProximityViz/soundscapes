@@ -1,25 +1,16 @@
-ion-view.explore-view {
-  .photo, .spectrogram {
-    display: inline-block;
-    width: 600px;
-    height: 400px;
-    max-height: 25vh;
-    max-width: calc(50vw - 26px);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-  }
-  .spectrogram {
-    margin-left: 8px;
-  }
-  .photo {
-    margin-right: 8px;
-  }
-  .sound-credit {
-    display: inline-block;
-  }
-  .item-divider {
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
+.explore-view {
+    .pack-description {
+        color: $stable;
+        font-size: $px18;
+        padding: $px20;
+    }
+    .sound-card {
+        .card-title {
+            color: $stable;
+            font-size: $px36;
+        }
+        .card-content {
+            
+        }
+    }
 }

@@ -3,30 +3,90 @@
   src: url('../resources/Belleza-Regular.ttf') format('truetype');
 }
 
-ion-content {
-  background-color: $positive;
-  color: #fff;
-  font-family: 'Belleza', Arial;
+$logo-stack: 'Belleza', Arial;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../resources/Montserrat-Regular.ttf') format('truetype');
 }
-ion-nav-bar {
-  background-color: $positive;
-  .back-text {
-    font-family: 'Belleza', Arial;
+
+$general-stack: 'Montserrat', 'Helvetica Neue', Helvetica, Arial;
+
+ion-content {
+  background-image: url('../resources/background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: $general-stack;
+  font-weight: $thin !important;
+}
+
+.translucent {
+  background-color: $background;
+  width: 100%;
+  padding-top: $px25;
+  padding-bottom: $px25;
+  margin-top: $px20;
+  margin-bottom: $px40;
+  .translucent {
+    margin: 0px;
+    margin-top: calc(-25 * 100vw / 1024);
   }
 }
-ion-header-bar.bar .title {
-  font-size: 30px;
-  font-family: 'Belleza', Arial;
-  font-variant: small-caps;
+
+button {
+  border-radius: $px15 !important; // is this working?
+  font-weight: $thin;
+  font-family: $general-stack;
+  &.button-dark {
+    border: 2px solid $calm !important;
+  }
 }
 
-.hidden {
-  display: none;
+.center {
+  text-align: center;
 }
 
-a {
-  color: $calm;
+.padding {
+  padding: $px40;
 }
+
+.title-bar {
+  margin-top: calc(-24 * 100vw / 1024);
+  margin-bottom: $px12;
+  .title {
+    color: $title;
+    font-size: $px56;
+    font-family: $logo-stack;
+    text-align: center;
+  }
+}
+
+// ion-content {
+//   background-color: $positive;
+//   color: #fff;
+//   font-family: 'Belleza', Arial;
+// }
+// ion-nav-bar {
+//   background-color: $positive;
+//   .back-text {
+//     font-family: 'Belleza', Arial;
+//   }
+// }
+// ion-header-bar.bar .title {
+//   font-size: 30px;
+//   font-family: 'Belleza', Arial;
+//   font-variant: small-caps;
+// }
+
+// .hidden {
+//   display: none;
+// }
+
+// a {
+//   color: $calm;
+// }
 
 /* Suggested by ionic developers to make modal full height on tablets*/
 @media (min-width: 680px) {

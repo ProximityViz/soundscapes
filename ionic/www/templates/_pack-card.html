@@ -1,0 +1,26 @@
+<!--{{pack.title}}-->
+
+<div class="pack-card">
+    <div class="pack-title">{{pack.title}}</div>
+    <div class="pack-details">
+        <!--25, 50-->
+        <div class="pack-detail pack-photo">
+            
+        </div>
+        <div class="pack-detail left-button">
+            <button class="button button-dark" ui-sref="game-pack({pack: pack.shortTitle, soundId: 0})">Play</button>
+            <!--TODO: should only display Play if downloaded-->
+            <div class="progress-bar-container">
+                <div class="progress"> of </div>
+                <div class="progress-bar">
+                    <div class="complete"></div>
+                    <div class="incomplete"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pack-detail right-button">
+            <button class="button button-dark" ui-sref="explore-pack({pack: pack.shortTitle})">Explore</button>
+            <!--TODO: should only display Explore if downloaded, otherwise display Download-->
+        </div>
+    </div>
+</div>

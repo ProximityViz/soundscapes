@@ -4,5 +4,6 @@ angular.module('app.controllers')
 	console.log('PacksCtrl');
 
 	this.packs = SoundsFactory.getPacks();
+	console.log(this.packs);
 
 }]);

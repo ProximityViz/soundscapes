@@ -38,7 +38,8 @@ angular.module('app',
   .state('app', {
     url: '/',
     // abstract: true,
-    templateUrl: 'templates/nav.html'
+    templateUrl: 'templates/nav.html',
+    controller: 'PacksCtrl as packs'
   })
   .state('learn', {
     url: '/learn',

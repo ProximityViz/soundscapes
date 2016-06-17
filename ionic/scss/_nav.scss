@@ -1,25 +1,83 @@
-ion-view.nav,
-ion-view.game,
-ion-view.explore {
-  .button {
-    background-color: $light;
-    color: $energized;
-    font-family: 'Belleza';
-    // text-transform: uppercase;
-    font-variant: small-caps;
-    height: 100px;
-    font-size: 30px;
-    &.activated {
-      background-color: $light;
-      color: $positive;
-    }
-    &:hover {
-      color: $positive;
-    }
-  }
+.button.learn {
+    width: $px700;
+    height: $px90;
+    font-size: $px34;
+    color: $stable;
 }
-ion-view.nav {
-  .button {
-    height: calc((100vh - 115px - 20px) / 5);
-  }
+
+.nav {
+    .title {
+        text-align: center;
+        font-family: $logo-stack;
+        color: $title;
+        font-size: $px100;
+    }
+    .translucent {
+        .pack-title {
+            color: $stable;
+            font-size: $px36;
+        }
+        .pack-details {
+            text-align: center;
+            padding: $px28;
+            .pack-detail {
+                display: inline-block;
+                border: 1px solid $calm;
+                height: $px160;
+                width: $px241;
+                margin-left: $px20;
+                margin-right: $px20;
+                vertical-align: top;
+                font-size: $px34;
+                color: $stable;
+                font-weight: $regular;
+                &.pack-photo {
+                    
+                }
+                button {
+                    width: $px242;
+                    height: $px120;
+                    font-size: $px34;
+                    font-weight: $thin;
+                    color: $stable;
+                }
+                &.left-button {
+                    .progress-bar-container {
+                        position: relative;
+                        .progress {
+                            position: absolute;
+                            left: 0px;
+                            right: $px140;
+                            text-align: left;
+                            line-height: $px36;
+                            display: inline-block;
+                            font-size: $px24;
+                        }
+                        .progress-bar {
+                            position: absolute;
+                            right: 0px;
+                            top: $px12;
+                            display: inline-block;
+                            padding: 0px;
+                            // margin-top: $px12;
+                            width: $px140;
+                            height: $px12;
+                            background-color: $light; // TODO: this is temporary
+                            .complete {
+                                display: inline-block;
+                                background-color: $assertive;
+                            }
+                            .incomplete {
+                                display: inline-block;
+                                background-color: $energized;
+                            }
+                        }
+                    }
+                }
+                &.right-button {
+                    
+                }
+            }
+        }
+    }
 }

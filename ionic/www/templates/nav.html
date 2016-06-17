@@ -1,22 +1,13 @@
 <ion-view view-title="enviroSound" class="nav">
-  <ion-nav-title>
-    <span style="font-variant: normal;">enviroSound</span>
-  </ion-nav-title>
   <ion-content class="padding">
-    <button class="button button-positive button-block" ui-sref="learn">
-      Learn
-    </button>
-    <button class="button button-positive button-block" ui-sref="game">
-      Play
-    </button>
-    <button class="button button-positive button-block" ui-sref="explore">
-      Explore
-    </button>
-<!--     <button class="button button-positive button-block">
-      Create
-    </button>
-    <button class="button button-positive button-block">
-      Present
-    </button> -->
+    <h1 class="title">enviroSound</h1>
+    <div class="translucent center">
+      <button class="button button-dark learn" ui-sref="learn">
+        What are Soundscapes?
+      </button>
+    </div>
+    <div class="translucent" ng-repeat="pack in packs.packs">
+      <ng-include src="'templates/_pack-card.html'"></ng-include>
+    </div>
   </ion-content>
 </ion-view>
