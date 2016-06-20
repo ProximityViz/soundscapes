@@ -1,16 +1,16 @@
 .explore-view {
-    .pack-description {
-        color: $stable;
-        font-size: $px18;
-        padding: $px20;
-    }
-    .sound-card {
-        .card-title {
-            color: $stable;
-            font-size: $px36;
+    .card-content {
+        .play-button {
+            background-image: url('http://www.placekitten.com/300');
+            width: $px80;
+            height: $px80;
+            background-size: cover;
         }
-        .card-content {
-            
+        .photo {
+            width: $px250;
+            height: $px167;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
     }
 }

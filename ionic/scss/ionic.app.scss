@@ -12,12 +12,14 @@ $calm: #0a5b59;                     // teal
 $positive: #0a2f41;                 // light-navy // IS THIS ACTUALLY USED???
 $dark: #121f33;                     // dark-navy
 $background: rgba(18, 31, 51, 0.5); // translucent-navy
+$light-background: rgba(255, 255, 255, 0.1);
 $assertive: #f00;                   // red
 $balanced: #21d955;                 // green
 
 $thin: 200;
 $regular: 400;
 
+$pxneg20: calc(-20 * 100vw / 1024);
 $px10: calc(10 * 100vw / 1024);
 $px12: calc(12 * 100vw / 1024);
 $px14: calc(14 * 100vw / 1024);
@@ -51,16 +53,28 @@ $px251: calc(251 * 100vw / 1024);
 $px350: calc(350 * 100vw / 1024);
 $px376: calc(376 * 100vw / 1024);
 $px435: calc(435 * 100vw / 1024);
+$px600: calc(600 * 100vw / 1024);
 $px658: calc(658 * 100vw / 1024);
 $px700: calc(700 * 100vw / 1024);
 $px944: calc(944 * 100vw / 1024);
 
 
 // The path for our ionicons font files, relative to the built CSS in www/css
-$ionicons-font-path: "../lib/ionic/fonts" !default;
+// $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+// zeroer
+.card {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: none;
+    background-color: transparent;
+    margin: 0px;
+    border-radius: 0px;
+}
+
 @import "general";
 @import "nav";
 @import "learn";

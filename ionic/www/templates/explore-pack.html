@@ -4,16 +4,21 @@
       <h1 class="title">{{explore.pack.title}}</h1>
     </div>
     <!--TODO: do UI design of category names-->
-    <div class="pack-description translucent">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    </div>
-    <div class="sound-card translucent">
-      <div class="card-title translucent">
-        Temporary Card
-        <!--TODO: translucent + translucent is working backwards of how it should-->
-      </div>
+    <div class="pack-description card card-with-max-width">
       <div class="card-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Description of pack goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </div>
+    <div class="pack-categories" ng-repeat="category in explore.pack.pack">
+      <div class="card card-with-max-width" ng-repeat="card in category.cards">
+        <div class="title">
+          {{card.title}}
+        </div>
+        <div class="card-content">
+          <div class="play-button"></div>
+          {{card.sound.info}}
+          <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}"></div>
+        </div>
       </div>
     </div>
     <div class="list">

@@ -5,6 +5,7 @@ angular.module('app.controllers')
 
 	this.packName = "NPS";
 	this.pack = SoundsFactory.getExplore($stateParams.pack);
+	console.log(this.pack);
 	this.expanded = [];
 	for (var i in this.pack.pack) {
 		this.expanded[i] = false;

@@ -8,6 +8,14 @@ $logo-stack: 'Belleza', Arial;
 @font-face {
   font-family: 'Montserrat';
   src: url('../resources/Montserrat-Regular.ttf') format('truetype');
+}  
+
+@mixin blur($parameters) {
+  -webkit-filter: blur($parameters);
+  -moz-filter   : blur($parameters);
+  -o-filter     : blur($parameters);
+  -ms-filter    : blur($parameters);
+  filter        : blur($parameters);
 }
 
 $general-stack: 'Montserrat', 'Helvetica Neue', Helvetica, Arial;
@@ -22,16 +30,31 @@ ion-content {
   font-weight: $thin !important;
 }
 
-.translucent {
-  background-color: $background;
-  width: 100%;
-  padding-top: $px25;
-  padding-bottom: $px25;
+.card-with-max-width {
+  max-width: $px600;
+  margin: $px20 auto !important;
   margin-top: $px20;
   margin-bottom: $px40;
-  .translucent {
-    margin: 0px;
-    margin-top: calc(-25 * 100vw / 1024);
+}
+
+.card {
+  position: relative;
+  background-color: rgba(18, 31, 51, 0.25);
+  -webkit-backdrop-filter: blur(15px);
+  overflow: hidden;
+  .title {
+    color: $stable;
+    font-size: $px36;
+    line-height: $px40;
+    padding: $px20;
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  .card-content {
+    margin: 0 auto;
+    color: $stable;
+    font-size: $px18;
+    padding: $px20;
   }
 }
 
