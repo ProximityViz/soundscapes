@@ -1,7 +1,7 @@
 .button.learn {
-    width: $px700;
-    height: $px90;
-    font-size: $px34;
+    @include px(width, 700);
+    @include px(height, 90);
+    @include px(font-size, 34);
     color: $stable;
 }
 
@@ -10,34 +10,34 @@
         text-align: center;
         font-family: $logo-stack;
         color: $title;
-        font-size: $px100;
+        @include px(font-size, 100);
     }
     .translucent {
         .pack-title {
             color: $stable;
-            font-size: $px36;
+            @include px(font-size, 36);
         }
         .pack-details {
             text-align: center;
-            padding: $px28;
+            @include px(padding, 28);
             .pack-detail {
                 display: inline-block;
                 border: 1px solid $calm;
-                height: $px160;
-                width: $px241;
-                margin-left: $px20;
-                margin-right: $px20;
+                @include px(height, 160);
+                @include px(width, 241);
+                @include px(margin-left, 20);
+                @include px(margin-right, 20);
                 vertical-align: top;
-                font-size: $px34;
+                @include px(font-size, 34);
                 color: $stable;
                 font-weight: $regular;
                 &.pack-photo {
                     
                 }
                 button {
-                    width: $px242;
-                    height: $px120;
-                    font-size: $px34;
+                    @include px(width, 242);
+                    @include px(height, 120);
+                    @include px(font-size, 34);
                     font-weight: $thin;
                     color: $stable;
                 }
@@ -47,21 +47,20 @@
                         .progress {
                             position: absolute;
                             left: 0px;
-                            right: $px140;
+                            @include px(right, 140);
                             text-align: left;
-                            line-height: $px36;
+                            @include px(line-height, 36);
                             display: inline-block;
-                            font-size: $px24;
+                            @include px(font-size, 24);
                         }
                         .progress-bar {
                             position: absolute;
                             right: 0px;
-                            top: $px12;
+                            @include px(top, 12);
                             display: inline-block;
                             padding: 0px;
-                            // margin-top: $px12;
-                            width: $px140;
-                            height: $px12;
+                            @include px(width, 140);
+                            @include px(height, 12);
                             background-color: $light; // TODO: this is temporary
                             .complete {
                                 display: inline-block;

@@ -8,9 +8,13 @@ $logo-stack: 'Belleza', Arial;
 @font-face {
   font-family: 'Montserrat';
   src: url('../resources/Montserrat-Regular.ttf') format('truetype');
-}  
+}
 
-@mixin blur($parameters) {
+@mixin px($style, $pixels) {
+  #{$style}: calc(#{$pixels} * 100vw / 1024);
+}
+
+@mixin blur($parameters) { // TODO: remove if not used
   -webkit-filter: blur($parameters);
   -moz-filter   : blur($parameters);
   -o-filter     : blur($parameters);
@@ -31,10 +35,11 @@ ion-content {
 }
 
 .card-with-max-width {
-  max-width: $px600;
-  margin: $px20 auto !important;
-  margin-top: $px20;
-  margin-bottom: $px40;
+  @include px(max-width, 600);
+  @include px(margin-top, 20);
+  @include px(margin-bottom, 40);
+  margin-left: auto !important;
+  margin-right: auto !important; // some of these might need !important
 }
 
 .card {
@@ -44,22 +49,24 @@ ion-content {
   overflow: hidden;
   .title {
     color: $stable;
-    font-size: $px36;
-    line-height: $px40;
-    padding: $px20;
+    @include px(font-size, 36);
+    @include px(line-height, 42);
+    @include px(padding, 20);
+    @include px(padding-top, 12);
+    @include px(padding-bottom, 12);
     background-color: rgba(255, 255, 255, 0.25);
-    -webkit-backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); // TODO: should this 15px be relative?
   }
   .card-content {
     margin: 0 auto;
     color: $stable;
-    font-size: $px18;
-    padding: $px20;
+    @include px(font-size, 18);
+    @include px(padding, 20);
   }
 }
 
 button {
-  border-radius: $px15 !important; // is this working?
+  // border-radius: $px15 !important; // TODO: is this working?
   font-weight: $thin;
   font-family: $general-stack;
   &.button-dark {
@@ -72,44 +79,19 @@ button {
 }
 
 .padding {
-  padding: $px40;
+  @include px(padding, 40);
 }
 
 .title-bar {
-  margin-top: calc(-24 * 100vw / 1024);
-  margin-bottom: $px12;
+  @include px(margin-top, -24);
+  @include px(margin-bottom, 12);
   .title {
     color: $title;
-    font-size: $px56;
+    @include px(font-size, 56);
     font-family: $logo-stack;
     text-align: center;
   }
 }
-
-// ion-content {
-//   background-color: $positive;
-//   color: #fff;
-//   font-family: 'Belleza', Arial;
-// }
-// ion-nav-bar {
-//   background-color: $positive;
-//   .back-text {
-//     font-family: 'Belleza', Arial;
-//   }
-// }
-// ion-header-bar.bar .title {
-//   font-size: 30px;
-//   font-family: 'Belleza', Arial;
-//   font-variant: small-caps;
-// }
-
-// .hidden {
-//   display: none;
-// }
-
-// a {
-//   color: $calm;
-// }
 
 /* Suggested by ionic developers to make modal full height on tablets*/
 @media (min-width: 680px) {
