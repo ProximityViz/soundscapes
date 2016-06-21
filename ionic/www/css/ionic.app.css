@@ -9749,9 +9749,10 @@ ion-content {
 
 .card-with-max-width {
   max-width: calc(600 * 100vw / 1024);
-  margin: calc(20 * 100vw / 1024) auto !important;
   margin-top: calc(20 * 100vw / 1024);
-  margin-bottom: calc(40 * 100vw / 1024); }
+  margin-bottom: calc(40 * 100vw / 1024);
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 .card {
   position: relative;
@@ -9761,8 +9762,10 @@ ion-content {
   .card .title {
     color: #e4d9c3;
     font-size: calc(36 * 100vw / 1024);
-    line-height: calc(40 * 100vw / 1024);
+    line-height: calc(42 * 100vw / 1024);
     padding: calc(20 * 100vw / 1024);
+    padding-top: calc(12 * 100vw / 1024);
+    padding-bottom: calc(12 * 100vw / 1024);
     background-color: rgba(255, 255, 255, 0.25);
     -webkit-backdrop-filter: blur(15px); }
   .card .card-content {
@@ -9772,7 +9775,6 @@ ion-content {
     padding: calc(20 * 100vw / 1024); }
 
 button {
-  border-radius: calc(15 * 100vw / 1024) !important;
   font-weight: 200;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial; }
   button.button-dark {
@@ -9871,14 +9873,38 @@ button {
           display: inline-block;
           background-color: #21d955; }
 
-.explore-view .card-content .play-button {
-  background-image: url("http://www.placekitten.com/300");
-  width: calc(80 * 100vw / 1024);
-  height: calc(80 * 100vw / 1024);
-  background-size: cover; }
+.explore-view .card-content .play-button,
+.explore-view .card-content .pause-button {
+  background-color: #121f33;
+  border-color: #0a5b59;
+  border-width: 1;
+  border-style: solid;
+  border-radius: calc(3.5 * 100vw / 1024);
+  width: calc(90 * 100vw / 1024);
+  height: calc(90 * 100vw / 1024);
+  background-size: cover;
+  display: inline-block;
+  vertical-align: top; }
 
-.explore-view .card-content .photo {
-  width: calc(250 * 100vw / 1024);
-  height: calc(167 * 100vw / 1024);
-  background-size: contain;
-  background-repeat: no-repeat; }
+.explore-view .card-content .play-button {
+  background-image: url("../resources/icons/play.svg"); }
+
+.explore-view .card-content .pause-button {
+  background-image: url("../resources/icons/pause.svg"); }
+
+.explore-view .card-content .info {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(450 * 100vw / 1024);
+  margin-left: calc(10 * 100vw / 1024); }
+
+.explore-view .card-content .images {
+  margin-top: calc(20 * 100vw / 1024); }
+  .explore-view .card-content .images .photo,
+  .explore-view .card-content .images .spectrogram {
+    width: calc(250 * 100vw / 1024);
+    height: calc(167 * 100vw / 1024);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block; }

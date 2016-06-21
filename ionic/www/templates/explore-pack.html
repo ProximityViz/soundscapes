@@ -15,9 +15,12 @@
           {{card.title}}
         </div>
         <div class="card-content">
-          <div class="play-button"></div>
-          {{card.sound.info}}
-          <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}"></div>
+          <button ng-click="gamePlay.audioTapped()" class="play-button" ng-class="gamePlay.audioIcon"></button>
+          <div class="info">{{card.sound.info}}</div>
+          <div class="images">
+            <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}"></div>
+            <div class="spectrogram" ng-style="{'background-image':'url('+card.spectrogram.file+')'}"></div>
+          </div>
         </div>
       </div>
     </div>

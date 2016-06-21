@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>Play Button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Reskin-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Explore" transform="translate(-220.000000, -321.000000)" fill="#E4D9C3">
+            <g id="Play-Button" transform="translate(220.000000, 321.000000)">
+                <polygon id="Triangle-1" transform="translate(43.080925, 40.080925) rotate(90.000000) translate(-43.080925, -40.080925) " points="43.0809249 18 65.1618497 62.1618497 21 62.1618497"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

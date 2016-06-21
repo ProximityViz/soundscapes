@@ -1,16 +1,41 @@
 .explore-view {
     .card-content {
-        .play-button {
-            background-image: url('http://www.placekitten.com/300');
+        .play-button,
+        .pause-button {
+            background-color: $dark;
+            border-color: $calm;
+            border-width: 1;
+            border-style: solid;
+            @include px(border-radius, 3.5);
             @include px(width, 90);
             @include px(height, 90);
             background-size: cover;
+            display: inline-block;
+            vertical-align: top;
         }
-        .photo {
-            background-size: contain;
-            background-repeat: no-repeat;
+        .play-button {
+            background-image: url('../resources/icons/play.svg');
+        }
+        .pause-button {
+            background-image: url('../resources/icons/pause.svg');
+        }
+        .info {
+            display: inline-block;
+            vertical-align: top;
+            @include px(width, 450);
+            @include px(margin-left, 10);
+        }
+        .images {
+            @include px(margin-top, 20);
+            .photo,
+            .spectrogram {
                 @include px(width, 250);
                 @include px(height, 167);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: inline-block;
+            }
         }
     }
 }
