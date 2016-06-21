@@ -34,12 +34,16 @@ ion-content {
   font-weight: $thin !important;
 }
 
+.padding {
+  padding-top: calc(15 * 100vw / 1024) !important;
+  padding-bottom: calc(5 * 100vw / 1024) !important;
+}
+
 .card-with-max-width {
   @include px(max-width, 600);
-  @include px(margin-top, 20);
-  @include px(margin-bottom, 40);
+  @include px(margin-bottom, 20);
   margin-left: auto !important;
-  margin-right: auto !important; // some of these might need !important
+  margin-right: auto !important;
 }
 
 .card {
@@ -83,14 +87,44 @@ button {
 }
 
 .title-bar {
-  @include px(margin-top, -24);
-  @include px(margin-bottom, 12);
+  @include px(margin-top, 10);
+  // margin-bottom: 0;
+  .back-button, 
+  .title,
+  .back-icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .back-button {
+    @include px(width, 120);
+    @include px(font-size, 36);
+    color: $stable;
+    font-family: $logo-stack;
+    .back-icon {
+      background-image: url('../resources/icons/chevron-left.svg');
+      background-position-x: center;
+      @include px(background-position-y, 20);
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include px(width, 15);
+      @include px(height, 67);
+      @include px(margin-left, 17);
+      @include px(margin-right, 11);
+    }
+  }
   .title {
     color: $title;
     @include px(font-size, 56);
     font-family: $logo-stack;
     text-align: center;
+    margin: 0;
+    @include px(width, 784);
   }
+}
+
+a {
+    color: $link;
+    text-decoration: none;
 }
 
 /* Suggested by ionic developers to make modal full height on tablets*/

@@ -9747,10 +9747,13 @@ ion-content {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
   font-weight: 200 !important; }
 
+.padding {
+  padding-top: calc(15 * 100vw / 1024) !important;
+  padding-bottom: calc(5 * 100vw / 1024) !important; }
+
 .card-with-max-width {
   max-width: calc(600 * 100vw / 1024);
-  margin-top: calc(20 * 100vw / 1024);
-  margin-bottom: calc(40 * 100vw / 1024);
+  margin-bottom: calc(20 * 100vw / 1024);
   margin-left: auto !important;
   margin-right: auto !important; }
 
@@ -9787,13 +9790,38 @@ button {
   padding: calc(40 * 100vw / 1024); }
 
 .title-bar {
-  margin-top: calc(-24 * 100vw / 1024);
-  margin-bottom: calc(12 * 100vw / 1024); }
+  margin-top: calc(10 * 100vw / 1024); }
+  .title-bar .back-button,
+  .title-bar .title,
+  .title-bar .back-icon {
+    display: inline-block;
+    vertical-align: middle; }
+  .title-bar .back-button {
+    width: calc(120 * 100vw / 1024);
+    font-size: calc(36 * 100vw / 1024);
+    color: #e4d9c3;
+    font-family: "Belleza", Arial; }
+    .title-bar .back-button .back-icon {
+      background-image: url("../resources/icons/chevron-left.svg");
+      background-position-x: center;
+      background-position-y: calc(20 * 100vw / 1024);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: calc(15 * 100vw / 1024);
+      height: calc(67 * 100vw / 1024);
+      margin-left: calc(17 * 100vw / 1024);
+      margin-right: calc(11 * 100vw / 1024); }
   .title-bar .title {
     color: #c5ab71;
     font-size: calc(56 * 100vw / 1024);
     font-family: "Belleza", Arial;
-    text-align: center; }
+    text-align: center;
+    margin: 0;
+    width: calc(784 * 100vw / 1024); }
+
+a {
+  color: #60E4E4;
+  text-decoration: none; }
 
 /* Suggested by ionic developers to make modal full height on tablets*/
 @media (min-width: 680px) {
@@ -9898,13 +9926,24 @@ button {
   width: calc(450 * 100vw / 1024);
   margin-left: calc(10 * 100vw / 1024); }
 
-.explore-view .card-content .images {
+.explore-view .card-content .images,
+.explore-view .card-content .credits {
   margin-top: calc(20 * 100vw / 1024); }
   .explore-view .card-content .images .photo,
-  .explore-view .card-content .images .spectrogram {
-    width: calc(250 * 100vw / 1024);
+  .explore-view .card-content .images .spectrogram,
+  .explore-view .card-content .credits .photo,
+  .explore-view .card-content .credits .spectrogram {
+    width: calc(264 * 100vw / 1024);
     height: calc(167 * 100vw / 1024);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block; }
+  .explore-view .card-content .images .spectrogram,
+  .explore-view .card-content .credits .spectrogram {
+    margin-left: calc(20 * 100vw / 1024); }
+
+.explore-view .card-content .credits .photo,
+.explore-view .card-content .credits .spectrogram {
+  vertical-align: top;
+  height: auto; }

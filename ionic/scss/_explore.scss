@@ -25,16 +25,27 @@
             @include px(width, 450);
             @include px(margin-left, 10);
         }
-        .images {
+        .images,
+        .credits {
             @include px(margin-top, 20);
             .photo,
             .spectrogram {
-                @include px(width, 250);
+                @include px(width, 264);
                 @include px(height, 167);
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
                 display: inline-block;
+            }
+            .spectrogram {
+                @include px(margin-left, 20);
+            }
+        }
+        .credits {
+            .photo,
+            .spectrogram {
+                vertical-align: top;
+                height: auto;
             }
         }
     }

@@ -1,49 +1,32 @@
 <ion-view class="explore-view">
-  <ion-content class="padding">
+  <ion-content>
     <div class="title-bar">
+      <div class="back-button"><div class="back-icon"></div>Back</div>
       <h1 class="title">{{explore.pack.title}}</h1>
     </div>
     <!--TODO: do UI design of category names-->
-    <div class="pack-description card card-with-max-width">
-      <div class="card-content">
-        Description of pack goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </div>
-    <div class="pack-categories" ng-repeat="category in explore.pack.pack">
-      <div class="card card-with-max-width" ng-repeat="card in category.cards">
-        <div class="title">
-          {{card.title}}
-        </div>
+    <div class="padding">
+      <div class="pack-description card card-with-max-width">
         <div class="card-content">
-          <button ng-click="gamePlay.audioTapped()" class="play-button" ng-class="gamePlay.audioIcon"></button>
-          <div class="info">{{card.sound.info}}</div>
-          <div class="images">
-            <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}"></div>
-            <div class="spectrogram" ng-style="{'background-image':'url('+card.spectrogram.file+')'}"></div>
-          </div>
+          Description of pack goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </div>
       </div>
-    </div>
-    <div class="list">
-      <div ng-repeat="category in explore.pack.pack">
-        <div class="item item-divider item-icon-right" ng-click="explore.expandCollapse($index)">
-          {{category.category}}
-          <i class="icon" ng-class="explore.expanded[$index] ? 'ion-ios-minus-empty' : 'ion-ios-plus-empty'"></i>
-        </div>
-        <!-- maybe make this a partial -->
-        <div ng-show="explore.expanded[$index]">
-          <div ng-repeat="card in category.cards" class="item">
-            <div>{{card.title}}</div>
-            <div class="audio">
-              <audio controls class="inline">
-                <source ng-src="{{card.sound.file}}">
-                Your browser does not support the audio element.
-              </audio>
-              <div class="inline">Credit: <span ng-bind-html="card.sound.credit"></span></div>
+      <div class="pack-categories" ng-repeat="category in explore.pack.pack">
+        <div class="card card-with-max-width" ng-repeat="card in category.cards">
+          <div class="title">
+            {{card.title}}
+          </div>
+          <div class="card-content">
+            <button ng-click="gamePlay.audioTapped()" class="play-button" ng-class="gamePlay.audioIcon"></button>
+            <div class="info">{{card.sound.info}}</div>
+            <div class="images">
+              <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}"></div>
+              <div class="spectrogram" ng-style="{'background-image':'url('+card.spectrogram.file+')'}"></div>
             </div>
-            <div class="photo" ng-style="{'background-image':'url('+card.image.file+')'}" ng-click="explore.showPhotoModal(card)"></div>
-            <div class="spectrogram" ng-style="{'background-image': 'url('+card.spectrogram.file+')'}" ng-click="explore.showSpectrogramModal(card)"></div>
-            <div ng-bind-html="card.sound.info"></div>
+            <div class="credits">
+              <div class="photo" ng-bind-html="'Photo credit: '+card.image.credit"></div>
+              <div class="spectrogram" ng-bind-html="'Audio credit: '+card.sound.credit"></div>
+            </div>
           </div>
         </div>
       </div>
