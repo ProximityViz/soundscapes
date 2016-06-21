@@ -39,18 +39,19 @@ ion-content {
   padding-bottom: calc(5 * 100vw / 1024) !important;
 }
 
-.card-with-max-width {
-  @include px(max-width, 600);
-  @include px(margin-bottom, 20);
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
 
 .card {
   position: relative;
   background-color: rgba(18, 31, 51, 0.25);
   -webkit-backdrop-filter: blur(15px);
   overflow: hidden;
+  width: 100%;
+  &.card-with-max-width {
+    @include px(max-width, 600);
+    @include px(margin-bottom, 20);
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   .title {
     color: $stable;
     @include px(font-size, 36);

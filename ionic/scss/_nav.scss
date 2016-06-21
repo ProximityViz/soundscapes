@@ -12,10 +12,15 @@
         color: $title;
         @include px(font-size, 100);
     }
-    .translucent {
+    .card {
+        @include px(padding-top, 20);
+        @include px(padding-bottom, 20);
+        @include px(margin-bottom, 20);
         .pack-title {
             color: $stable;
             @include px(font-size, 36);
+            @include px(margin-left, 20);
+            @include px(margin-top, 6);
         }
         .pack-details {
             text-align: center;

@@ -5,12 +5,12 @@
       <h1 class="title">enviroSound</h1>
     </div>
     <div class="padding">
-      <div class="translucent center">
+      <div class="card center">
         <button class="button button-dark learn" ui-sref="learn">
           What are Soundscapes?
         </button>
       </div>
-      <div class="translucent" ng-repeat="pack in packs.packs">
+      <div class="card" ng-repeat="pack in packs.packs">
         <ng-include src="'templates/_pack-card.html'"></ng-include>
       </div>
     </div>

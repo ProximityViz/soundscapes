@@ -9751,17 +9751,17 @@ ion-content {
   padding-top: calc(15 * 100vw / 1024) !important;
   padding-bottom: calc(5 * 100vw / 1024) !important; }
 
-.card-with-max-width {
-  max-width: calc(600 * 100vw / 1024);
-  margin-bottom: calc(20 * 100vw / 1024);
-  margin-left: auto !important;
-  margin-right: auto !important; }
-
 .card {
   position: relative;
   background-color: rgba(18, 31, 51, 0.25);
   -webkit-backdrop-filter: blur(15px);
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%; }
+  .card.card-with-max-width {
+    max-width: calc(600 * 100vw / 1024);
+    margin-bottom: calc(20 * 100vw / 1024);
+    margin-left: auto !important;
+    margin-right: auto !important; }
   .card .title {
     color: #e4d9c3;
     font-size: calc(36 * 100vw / 1024);
@@ -9851,55 +9851,60 @@ a {
   color: #c5ab71;
   font-size: calc(100 * 100vw / 1024); }
 
-.nav .translucent .pack-title {
-  color: #e4d9c3;
-  font-size: calc(36 * 100vw / 1024); }
-
-.nav .translucent .pack-details {
-  text-align: center;
-  padding: calc(28 * 100vw / 1024); }
-  .nav .translucent .pack-details .pack-detail {
-    display: inline-block;
-    border: 1px solid #0a5b59;
-    height: calc(160 * 100vw / 1024);
-    width: calc(241 * 100vw / 1024);
-    margin-left: calc(20 * 100vw / 1024);
-    margin-right: calc(20 * 100vw / 1024);
-    vertical-align: top;
-    font-size: calc(34 * 100vw / 1024);
+.nav .card {
+  padding-top: calc(20 * 100vw / 1024);
+  padding-bottom: calc(20 * 100vw / 1024);
+  margin-bottom: calc(20 * 100vw / 1024); }
+  .nav .card .pack-title {
     color: #e4d9c3;
-    font-weight: 400; }
-    .nav .translucent .pack-details .pack-detail button {
-      width: calc(242 * 100vw / 1024);
-      height: calc(120 * 100vw / 1024);
+    font-size: calc(36 * 100vw / 1024);
+    margin-left: calc(20 * 100vw / 1024);
+    margin-top: calc(6 * 100vw / 1024); }
+  .nav .card .pack-details {
+    text-align: center;
+    padding: calc(28 * 100vw / 1024); }
+    .nav .card .pack-details .pack-detail {
+      display: inline-block;
+      border: 1px solid #0a5b59;
+      height: calc(160 * 100vw / 1024);
+      width: calc(241 * 100vw / 1024);
+      margin-left: calc(20 * 100vw / 1024);
+      margin-right: calc(20 * 100vw / 1024);
+      vertical-align: top;
       font-size: calc(34 * 100vw / 1024);
-      font-weight: 200;
-      color: #e4d9c3; }
-    .nav .translucent .pack-details .pack-detail.left-button .progress-bar-container {
-      position: relative; }
-      .nav .translucent .pack-details .pack-detail.left-button .progress-bar-container .progress {
-        position: absolute;
-        left: 0px;
-        right: calc(140 * 100vw / 1024);
-        text-align: left;
-        line-height: calc(36 * 100vw / 1024);
-        display: inline-block;
-        font-size: calc(24 * 100vw / 1024); }
-      .nav .translucent .pack-details .pack-detail.left-button .progress-bar-container .progress-bar {
-        position: absolute;
-        right: 0px;
-        top: calc(12 * 100vw / 1024);
-        display: inline-block;
-        padding: 0px;
-        width: calc(140 * 100vw / 1024);
-        height: calc(12 * 100vw / 1024);
-        background-color: #fff; }
-        .nav .translucent .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .complete {
+      color: #e4d9c3;
+      font-weight: 400; }
+      .nav .card .pack-details .pack-detail button {
+        width: calc(242 * 100vw / 1024);
+        height: calc(120 * 100vw / 1024);
+        font-size: calc(34 * 100vw / 1024);
+        font-weight: 200;
+        color: #e4d9c3; }
+      .nav .card .pack-details .pack-detail.left-button .progress-bar-container {
+        position: relative; }
+        .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress {
+          position: absolute;
+          left: 0px;
+          right: calc(140 * 100vw / 1024);
+          text-align: left;
+          line-height: calc(36 * 100vw / 1024);
           display: inline-block;
-          background-color: #f00; }
-        .nav .translucent .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .incomplete {
+          font-size: calc(24 * 100vw / 1024); }
+        .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar {
+          position: absolute;
+          right: 0px;
+          top: calc(12 * 100vw / 1024);
           display: inline-block;
-          background-color: #21d955; }
+          padding: 0px;
+          width: calc(140 * 100vw / 1024);
+          height: calc(12 * 100vw / 1024);
+          background-color: #fff; }
+          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .complete {
+            display: inline-block;
+            background-color: #f00; }
+          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .incomplete {
+            display: inline-block;
+            background-color: #21d955; }
 
 .explore-view .card-content .play-button,
 .explore-view .card-content .pause-button {
