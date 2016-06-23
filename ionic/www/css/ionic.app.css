@@ -9782,6 +9782,8 @@ button {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial; }
   button.button-dark {
     border: 2px solid #0a5b59 !important; }
+    button.button-dark.activated {
+      background-color: #0a5b59 !important; }
 
 .center {
   text-align: center; }
@@ -9840,8 +9842,8 @@ a {
     top: 64px; } }
 
 .button.learn {
-  width: calc(700 * 100vw / 1024);
-  height: calc(90 * 100vw / 1024);
+  width: calc(692 * 100vw / 1024);
+  height: calc(82 * 100vw / 1024);
   font-size: calc(34 * 100vw / 1024);
   color: #e4d9c3; }
 
@@ -9862,10 +9864,10 @@ a {
     margin-top: calc(6 * 100vw / 1024); }
   .nav .card .pack-details {
     text-align: center;
-    padding: calc(28 * 100vw / 1024); }
+    padding: calc(28 * 100vw / 1024);
+    padding-bottom: calc(10 * 100vw / 1024); }
     .nav .card .pack-details .pack-detail {
       display: inline-block;
-      border: 1px solid #0a5b59;
       height: calc(160 * 100vw / 1024);
       width: calc(241 * 100vw / 1024);
       margin-left: calc(20 * 100vw / 1024);
@@ -9874,8 +9876,13 @@ a {
       font-size: calc(34 * 100vw / 1024);
       color: #e4d9c3;
       font-weight: 400; }
+      .nav .card .pack-details .pack-detail.pack-photo {
+        background-image: url("http://placekitten.com/300/200");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat; }
       .nav .card .pack-details .pack-detail button {
-        width: calc(242 * 100vw / 1024);
+        width: calc(241 * 100vw / 1024);
         height: calc(120 * 100vw / 1024);
         font-size: calc(34 * 100vw / 1024);
         font-weight: 200;
@@ -9898,13 +9905,20 @@ a {
           padding: 0px;
           width: calc(140 * 100vw / 1024);
           height: calc(12 * 100vw / 1024);
-          background-color: #fff; }
-          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .complete {
-            display: inline-block;
-            background-color: #f00; }
+          background-color: #0a5b59; }
+          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .complete,
           .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .incomplete {
+            position: absolute;
+            top: 0;
             display: inline-block;
+            width: 50%;
+            height: 100%; }
+          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .complete {
+            left: 0;
             background-color: #21d955; }
+          .nav .card .pack-details .pack-detail.left-button .progress-bar-container .progress-bar .incomplete {
+            right: 0;
+            background-color: #f00; }
 
 .explore-view .card-content .play-button,
 .explore-view .card-content .pause-button {

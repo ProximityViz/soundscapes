@@ -4,23 +4,22 @@
     <div class="pack-title">{{pack.title}}</div>
     <div class="pack-details">
         <!--25, 50-->
-        <div class="pack-detail pack-photo">
+        <div class="pack-detail pack-photo" ng-style="{'background-image':'url('+pack.featuredPhoto+')'}">
             
         </div>
         <div class="pack-detail left-button">
-            <button class="button button-dark" ui-sref="game-pack({pack: pack.shortTitle, soundId: 0})">Play</button>
-            <!--TODO: should only display Play if downloaded-->
-            <div class="progress-bar-container">
-                <div class="progress"> of </div>
+            <button class="button button-dark" ui-sref="game-pack({pack: pack.shortTitle, soundId: 0})" ng-if="pack.pack.length > 0">Play</button>
+            <div class="progress-bar-container" ng-if="pack.pack.length > 0">
+                <div class="progress">{{pack.progress}} of {{pack.pack.length}}</div>
                 <div class="progress-bar">
-                    <div class="complete"></div>
-                    <div class="incomplete"></div>
+                    <div class="complete" ng-style="{'width':pack.progressPercent+'%'}"></div>
+                    <div class="incomplete" ng-style="{'width':pack.progressIncompletePercent+'%'}"></div>
                 </div>
             </div>
         </div>
         <div class="pack-detail right-button">
-            <button class="button button-dark" ui-sref="explore-pack({pack: pack.shortTitle})">Explore</button>
-            <!--TODO: should only display Explore if downloaded, otherwise display Download-->
+            <button class="button button-dark" ui-sref="explore-pack({pack: pack.shortTitle})" ng-if="pack.pack.length > 0">Explore</button>
+            <button class="button button-dark" ui-sref="" ng-if="pack.pack.length === 0">Download</button>
         </div>
     </div>
 </div>

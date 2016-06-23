@@ -1,6 +1,6 @@
 .button.learn {
-    @include px(width, 700);
-    @include px(height, 90);
+    @include px(width, 692);
+    @include px(height, 82);
     @include px(font-size, 34);
     color: $stable;
 }
@@ -25,9 +25,9 @@
         .pack-details {
             text-align: center;
             @include px(padding, 28);
+            @include px(padding-bottom, 10);
             .pack-detail {
                 display: inline-block;
-                border: 1px solid $calm;
                 @include px(height, 160);
                 @include px(width, 241);
                 @include px(margin-left, 20);
@@ -37,10 +37,13 @@
                 color: $stable;
                 font-weight: $regular;
                 &.pack-photo {
-                    
+                    background-image: url('http://placekitten.com/300/200');
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
                 button {
-                    @include px(width, 242);
+                    @include px(width, 241);
                     @include px(height, 120);
                     @include px(font-size, 34);
                     font-weight: $thin;
@@ -66,14 +69,22 @@
                             padding: 0px;
                             @include px(width, 140);
                             @include px(height, 12);
-                            background-color: $light; // TODO: this is temporary
-                            .complete {
+                            background-color: $calm;
+                            .complete, 
+                            .incomplete {
+                                position: absolute;
+                                top: 0;
                                 display: inline-block;
-                                background-color: $assertive;
+                                width: 50%;
+                                height: 100%;
+                            }
+                            .complete {
+                                left: 0;
+                                background-color: $balanced;
                             }
                             .incomplete {
-                                display: inline-block;
-                                background-color: $balanced;
+                                right: 0;
+                                background-color: $assertive;
                             }
                         }
                     }

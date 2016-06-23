@@ -503,11 +503,19 @@ angular.module('app')
       'SW1': {
         shortTitle: 'SW1',
         title: 'Stephen Wood - Georgia',
+        featuredPhoto: '../resources/SW1/sand-sizzle.jpg',
         pack: sw1Pack
+      },
+      'Space': {
+        shortTitle: 'Space',
+        title: 'Space Sounds',
+        featuredPhoto: 'https://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/apod.jpg',
+        pack: []
       },
       'NPS': {
         shortTitle: 'NPS',
-        title: 'NPS',
+        title: 'U.S. National Park Service',
+        featuredPhoto: '../resources/NPS/Orca.jpg',
         pack: npsPack
       }
     };
@@ -578,7 +586,7 @@ angular.module('app')
       quiz.correctSpectrogramIndex = Math.floor(Math.random() * 4);
       quiz.spectrograms = ["", "", "", ""];
       quiz.spectrograms[quiz.correctSpectrogramIndex] = pack[sound].spectrogram;
-      var remainingSpectrograms = angular.copy(pack);
+      var remainingSpectrograms = angular.copy(pack); // remainingSpectrograms are the three other possible options that will be displayed along with the correct one
       remainingSpectrograms.splice(sound, 1);
       for (var i = 0; i < quiz.spectrograms.length; i++) {
         if (quiz.spectrograms[i] === "") {

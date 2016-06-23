@@ -76,6 +76,9 @@ button {
   font-family: $general-stack;
   &.button-dark {
     border: 2px solid $calm !important;
+    &.activated {
+      background-color: $calm !important;
+    }
   }
 }
 
