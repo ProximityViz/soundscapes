@@ -1,7 +1,11 @@
 angular.module('app.controllers')
-.controller('ExploreCtrl', ['SoundsFactory', '$stateParams', '$scope', '$ionicModal', '$ionicScrollDelegate', '$timeout', 
-										function(SoundsFactory,   $stateParams,   $scope,   $ionicModal,   $ionicScrollDelegate,   $timeout) {
+.controller('ExploreCtrl', ['SoundsFactory', '$stateParams', '$scope', '$ionicModal', '$ionicScrollDelegate', '$timeout', '$ionicHistory', 
+					function(SoundsFactory,   $stateParams,   $scope,   $ionicModal,   $ionicScrollDelegate,   $timeout, $ionicHistory) {
 	console.log('ExploreCtrl');
+	
+	this.backClicked = function() {
+		$ionicHistory.goBack();
+	}
 
 	this.packName = "NPS";
 	this.pack = SoundsFactory.getExplore($stateParams.pack);

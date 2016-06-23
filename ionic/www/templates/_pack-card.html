@@ -19,7 +19,7 @@
         </div>
         <div class="pack-detail right-button">
             <button class="button button-dark" ui-sref="explore-pack({pack: pack.shortTitle})" ng-if="pack.pack.length > 0">Explore</button>
-            <button class="button button-dark" ui-sref="" ng-if="pack.pack.length === 0">Download</button>
+            <button class="button button-dark" ui-sref="download({pack: pack.shortTitle})" ng-if="pack.pack.length === 0">Download</button>
         </div>
     </div>
 </div>
