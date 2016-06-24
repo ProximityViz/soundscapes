@@ -9920,6 +9920,16 @@ a {
             right: 0;
             background-color: #f00; }
 
+.learn-view .card .title {
+  font-size: calc(30 * 100vw / 1024);
+  line-height: calc(37 * 100vw / 1024); }
+
+.learn-view .card .image-container {
+  margin: 0 auto;
+  width: 50%; }
+  .learn-view .card .image-container img {
+    width: 100%; }
+
 .explore-view .card-content .play-button,
 .explore-view .card-content .pause-button {
   background-color: #121f33;
